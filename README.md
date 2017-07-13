@@ -13,6 +13,37 @@ Issue can be found at [angular/material2#2691](https://github.com/angular/materi
 
 If you'd like to contribute create an issue or pull request.
 
+### Installation
+Install npm package using:
+
+`yarn add @material-extended/mde`
+
+or
+
+`npm install @material-extended/mde`
+
+
+app.module.ts
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { MdePopoverModule } from '@material-extended/mde';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    MdePopoverModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 ### Todo
 1. A design document needs creating to finalise requirements and API specifications.
