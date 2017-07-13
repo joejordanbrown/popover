@@ -1,0 +1,103 @@
+{
+  "name": "@material-extended/mde",
+  "version": "0.0.0",
+  "description": "Angular Material Extended",
+  "main": "./bundles/mde.umd.js",
+  "module": "./mde.es5.js",
+  "es2015": "./mde.js",
+  "typings": "./mde.d.ts",
+  "author": {
+    "name": "Joe Jordan Brown",
+    "email": "joe.jordan.brown@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/material-extended/mde"
+  },
+  "bugs": {
+    "url": "https://github.com/material-extended/mde/issues"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "material extended",
+    "material popover",
+    "components",
+    "popover"
+  ],
+  "engines": {
+    "node": ">= 6.9.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf out-tsc dist/*  \"src/lib/**/*.js\" \"src/lib/**/*.map\"",
+    "prebuild": "npm run clean",
+    "build": "node build.js",
+    "build-demo": "tsc -p src/demo/",
+    "build-demo:watch": "tsc -p src/demo/ -w",
+    "build-scss": "node-sass src/lib -o src/lib --output-style expanded",
+    "build-scss:watch": "node-sass src/lib -o src/lib --output-style expanded -w",
+    "serve": "lite-server -c=bs-config.json",
+    "prestart": "npm run build-demo && npm run build-scss",
+    "start": "concurrently \"npm run build-scss:watch\" \"npm run build-demo:watch\" \"npm run serve\"",
+    "build-test": "tsc -p src/lib/tsconfig.spec.json",
+    "build-test:watch": "tsc -p src/lib/tsconfig.spec.json -w",
+    "pretest": "npm run build-test",
+    "test": "concurrently \"npm run build-test:watch\" \"karma start karma.conf.js\"",
+    "pretest:once": "npm run build-test",
+    "test:once": "karma start karma.conf.js --single-run",
+    "preintegration": "npm run build && cd integration && npm run clean && npm install",
+    "integration": "npm run integration:aot && npm run integration:jit",
+    "integration:jit": "cd integration && npm run e2e",
+    "integration:aot": "cd integration && npm run e2e:aot",
+    "lint": "tslint ./src/**/*.ts -t verbose",
+    "release": "standard-version",
+    "release:alpha": "standard-version --prerelease alpha",
+    "release:beta": "standard-version --prerelease beta"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=4.0.0 <5.0.0 || >=4.0.0-beta <5.0.0"
+  },
+  "devDependencies": {
+    "@angular/animations": "^4.2.6",
+    "@angular/cdk": "^2.0.0-beta.8",
+    "@angular/common": "^4.2.6",
+    "@angular/compiler": "^4.2.6",
+    "@angular/compiler-cli": "^4.2.6",
+    "@angular/core": "^4.2.6",
+    "@angular/flex-layout": "^2.0.0-beta.8",
+    "@angular/forms": "^4.2.6",
+    "@angular/http": "^4.2.6",
+    "@angular/material": "^2.0.0-beta.8",
+    "@angular/platform-browser": "^4.2.6",
+    "@angular/platform-browser-dynamic": "^4.2.6",
+    "@types/jasmine": "2.5.36",
+    "@types/node": "^6.0.46",
+    "camelcase": "^4.0.0",
+    "concurrently": "3.4.0",
+    "core-js": "^2.4.1",
+    "execa": "^0.6.3",
+    "glob": "^7.1.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-html-reporter": "^0.2.7",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.5.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.42.0",
+    "rollup-plugin-sourcemaps": "^0.4.1",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rxjs": "^5.0.1",
+    "standard-version": "^4.0.0",
+    "systemjs": "^0.19.40",
+    "tslint": "5.4.2",
+    "typescript": "^2.4.1",
+    "zone.js": "^0.8.4"
+  }
+}

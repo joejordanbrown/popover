@@ -1,0 +1,629 @@
+<md-toolbar style="text-align: right" color="primary" #appPopoverPosition>
+  <h1>Material Extended - Popover</h1>
+  <div class="fill"></div>
+  <a md-button href="https://github.com/material-extended/mde" target="_blank">
+    <img src="../github-circle-white-transparent.svg">
+    Github
+  </a>
+  <div class="fill"></div>
+  <button md-icon-button color=""
+          [mdePopoverTriggerFor]="appPopover9" [mdePopoverTargetAt]="appPopoverPosition" mdePopoverTriggerOn="click" [mdePopoverOverlapTrigger]="false"
+          [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10"
+          [mdePopoverArrowOffsetX]="100" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#FFFFFF" [mdePopoverCloseOnClick]="false">
+    <md-icon>apps</md-icon>
+  </button>
+  <button md-icon-button color=""
+          [mdePopoverTriggerFor]="appPopover10" [mdePopoverTargetAt]="appPopoverPosition" mdePopoverTriggerOn="click"
+          [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10"
+          [mdePopoverArrowOffsetX]="60" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#e5e5e5" [mdePopoverCloseOnClick]="false">
+    <md-icon>notifications</md-icon>
+  </button>
+  <button md-icon-button color="white"
+          [mdePopoverTriggerFor]="appPopover11" [mdePopoverTargetAt]="appPopoverPosition" mdePopoverTriggerOn="click"
+          [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10"
+          [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#FFFFFF" [mdePopoverCloseOnClick]="false">
+    <md-icon>face</md-icon>
+  </button>
+
+</md-toolbar>
+
+<div class="content">
+
+
+  <h3 style="padding: 24px 0 0 24px;">
+    Google style app demo
+  </h3>
+
+  <p style="padding: 0 24px; max-width: 800px;">
+    These examples try to show off the potential use cases for this popover component.
+
+    <br>
+    <br>
+
+    This is a WIP, any bugs create an issue or pull request.
+
+    <br>
+    <br>
+
+    It needs a design document creating to finalise requirements and API specifications. Once a document is created the component can be refactored and released as beta for testing.
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div fxLayout fxLayout.xs="column" fxLayoutAlign="space-around start">
+
+
+  <div class="standard-popover" fxFlex="300px" fxFlex.xs="100%">
+
+    <h1>Standard Popover</h1>
+
+    mdePopoverOverlapTrigger: false
+
+    <br>
+    <br>
+
+    <div style="width: 300px; margin: 0 auto;">
+
+      <button md-raised-button [mdePopoverTriggerFor]="appPopover1" mdePopoverPositionX="before" mdePopoverPositionY="above" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+      <button md-raised-button color="warn" [mdePopoverTriggerFor]="appPopover2" mdePopoverPositionX="after" mdePopoverPositionY="above" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+      <button md-raised-button color="primary" [mdePopoverTriggerFor]="appPopover3" mdePopoverPositionX="before" mdePopoverPositionY="below" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+      <button md-raised-button color="accent" [mdePopoverTriggerFor]="appPopover4" mdePopoverPositionX="after" mdePopoverPositionY="below" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+
+    </div>
+
+    <mde-popover #appPopover1="mdePopover">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+    <mde-popover #appPopover2="mdePopover">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+    <mde-popover #appPopover3="mdePopover">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+    <mde-popover #appPopover4="mdePopover">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+  </div>
+
+
+
+  <div class="google-plus-popover" fxFlex="400px" fxFlex.xs="100%">
+
+    <h1>Similar to Google+ popover</h1>
+
+    mdePopoverOverlapTrigger: true
+
+    <br>
+    <br>
+
+    <div style="width: 300px; margin: 0 auto;">
+
+      <button md-raised-button [mdePopoverTriggerFor]="appPopover5">Hover Popover</button>
+      <button md-raised-button color="warn" [mdePopoverTriggerFor]="appPopover6">Hover Popover</button>
+      <button md-raised-button color="primary" [mdePopoverTriggerFor]="appPopover7">Hover Popover</button>
+      <button md-raised-button color="accent" [mdePopoverTriggerFor]="appPopover8">Hover Popover</button>
+
+    </div>
+
+    <mde-popover #appPopover5="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="above"
+                 [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
+                 mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+    <mde-popover #appPopover6="mdePopover" mdePopoverPositionX="after" mdePopoverPositionY="above"
+                 [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
+                 mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+    <mde-popover #appPopover7="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="below"
+                 [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
+                 mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+    <mde-popover #appPopover8="mdePopover" mdePopoverPositionX="after" mdePopoverPositionY="below"
+                 [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
+                 mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
+
+      <md-card style="width: 300px;">
+        <md-card-title>Card with title</md-card-title>
+        <md-card-content>
+          <p>This is supporting text.</p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>ACTION</button>
+        </md-card-actions>
+      </md-card>
+
+    </mde-popover>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <button class="support-button" md-fab
+          [mdePopoverTriggerFor]="appPopover12" [mdePopoverArrowOffsetX]="28" [mdePopoverArrowWidth]="16" mdePopoverArrowColor="#e5e5e5" mdePopoverTriggerOn="click" [mdePopoverCloseOnClick]="false">
+    <md-icon>chat</md-icon>
+  </button>
+</div>
+
+
+<mde-popover #appPopover9="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="below"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
+             mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100">
+
+  <div class="google-apps mat-elevation-z4">
+    <ul class="menu">
+      <li>
+        <a href="">
+          <md-icon>android</md-icon>
+          <span>Android</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <md-icon>map</md-icon>
+          <span>Maps</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <md-icon>extension</md-icon>
+          <span>Extensions</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <md-icon>favorite</md-icon>
+          <span>Favorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <md-icon>https</md-icon>
+          <span>Security</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <md-icon>verified_user</md-icon>
+          <span>Protection</span>
+        </a>
+      </li>
+    </ul>
+    <a class="action" href="">
+      More
+    </a>
+  </div>
+
+</mde-popover>
+
+<mde-popover #appPopover10="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="below"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
+             mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100">
+
+  <div class="google-notification mat-elevation-z4">
+
+    <div class="toolbar">
+      <div class="settings">
+        <button button-plain mdTooltip="Settings" mdTooltipPosition="below">
+          <md-icon>settings</md-icon>
+        </button>
+      </div>
+
+      <div class="title">
+        Google notifications
+      </div>
+
+      <div class="clear">
+        <button button-plain mdTooltip="Clear All" mdTooltipPosition="below">
+          <md-icon>clear_all</md-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+      <ol class="notification-items">
+        <li>
+          <img class="item-picture" src="http://placehold.it/80x80/009688/ffffff.png">
+          <div class="item-content">
+            <div class="item-title">New! Highlight from Google+</div>
+            <div class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="item-picture" src="http://placehold.it/80x80/ffeb3b/000000.png">
+          <div class="item-content">
+            <div class="item-title">New! Highlight from Google+</div>
+            <div class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="item-picture" src="http://placehold.it/80x80/673ab7/ffffff.png">
+          <div class="item-content">
+            <div class="item-title">New! Highlight from Google+</div>
+            <div class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="item-picture" src="http://placehold.it/80x80/f44336/ffffff.png">
+          <div class="item-content">
+            <div class="item-title">New! Highlight from Google+</div>
+            <div class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="item-picture" src="http://placehold.it/80x80/2196f3/000000.png">
+          <div class="item-content">
+            <div class="item-title">New! Highlight from Google+</div>
+            <div class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="item-picture" src="http://placehold.it/80x80/ff5722/ffffff.png">
+          <div class="item-content">
+            <div class="item-title">New! Highlight from Google+</div>
+            <div class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="item-picture" src="http://placehold.it/80x80/607D8B/ffffff.png">
+          <div class="item-content">
+            <div class="item-title">New! Highlight from Google+</div>
+            <div class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+
+    <div class="action">
+                <span>
+                    Previously read (Google+)
+                </span>
+    </div>
+
+
+  </div>
+</mde-popover>
+
+<mde-popover #appPopover11="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="below"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
+             mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100">
+
+  <md-card style="width: 200px;">
+    <md-card-header>
+      <img md-card-avatar src="http://placehold.it/50x50/5c6bc0/000000.png">
+      <md-card-title>Header title</md-card-title>
+      <md-card-subtitle>Header subtitle</md-card-subtitle>
+    </md-card-header>
+    <md-card-actions>
+      <button md-button>Add Account</button>
+      <div class="fill"></div>
+      <button md-button>Sign out</button>
+    </md-card-actions>
+  </md-card>
+
+</mde-popover>
+
+<mde-popover #appPopover12="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="above"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
+             mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100">
+
+  <div class="google-chat">
+    <div class="toolbar">
+      <div class="settings">
+        <button button-plain mdTooltip="Settings" mdTooltipPosition="below">
+          <md-icon>settings</md-icon>
+        </button>
+      </div>
+
+      <div class="title">
+        Lounge
+      </div>
+
+      <div class="clear">
+        <button button-plain mdTooltip="Close" mdTooltipPosition="below" (click)="appPopover12.close.emit();">
+          <md-icon>close</md-icon>
+        </button>
+      </div>
+    </div>
+
+    <ol class="discussion">
+      <li class="other">
+        <div class="avatar">
+          <img src="http://placehold.it/40x40/5c6bc0/000000.png"
+               [mdePopoverTriggerFor]="appPopover13" mdePopoverPositionX="after" mdePopoverPositionY="below"
+               [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+               [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+               [mdePopoverEnterDelay]="200" />
+        </div>
+        <div class="messages">
+          <p>I need you to complete this by today if possible.</p>
+          <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+        </div>
+      </li>
+      <li class="self">
+        <div class="avatar">
+          <img src="http://placehold.it/40x40/f44336/000000.png"
+               [mdePopoverTriggerFor]="appPopover13" mdePopoverPositionX="before" mdePopoverPositionY="below"
+               [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+               [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+               [mdePopoverEnterDelay]="200" />
+        </div>
+        <div class="messages">
+          <p>That should be fine.</p>
+          <p>It's a pretty small task.</p>
+          <time datetime="2009-11-13T20:14">50 mins</time>
+        </div>
+      </li>
+      <li class="other">
+        <div class="avatar">
+          <img src="http://placehold.it/40x40/5c6bc0/000000.png"
+               [mdePopoverTriggerFor]="appPopover13" mdePopoverPositionX="after" mdePopoverPositionY="below"
+               [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+               [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+               [mdePopoverEnterDelay]="200" />
+        </div>
+        <div class="messages">
+          <p>That's great.</p>
+          <p>Ping me once you've completed it.</p>
+          <time datetime="2009-11-13T20:14">49 mins</time>
+        </div>
+      </li>
+      <li class="self">
+        <div class="avatar">
+          <img src="http://placehold.it/40x40/f44336/000000.png"
+               [mdePopoverTriggerFor]="appPopover13" mdePopoverPositionX="before" mdePopoverPositionY="below"
+               [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#000000"
+               [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
+               [mdePopoverEnterDelay]="200" />
+        </div>
+        <div class="messages">
+          <p>I will do!</p>
+          <time datetime="2009-11-13T20:14">45 mins</time>
+        </div>
+      </li>
+      <li class="self">
+        <div class="avatar">
+          <img src="http://placehold.it/40x40/f44336/000000.png"
+               [mdePopoverTriggerFor]="appPopover13" mdePopoverPositionX="before" mdePopoverPositionY="below"
+               [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+               [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+               [mdePopoverEnterDelay]="200" />
+        </div>
+        <div class="messages">
+          <p>Quick question</p>
+          <p>What colour should it use?</p>
+          <time datetime="2009-11-13T20:14">37 mins</time>
+        </div>
+      </li>
+      <li class="other">
+        <div class="avatar">
+          <img src="http://placehold.it/40x40/5c6bc0/000000.png"
+               [mdePopoverTriggerFor]="appPopover13" mdePopoverPositionX="after" mdePopoverPositionY="below"
+               [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+               [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+               [mdePopoverEnterDelay]="200" />
+        </div>
+        <div class="messages">
+          <p>Material colours obviously :)</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="form">
+      <md-input-container style="width: 100%; margin-bottom: -10px;">
+        <input mdInput placeholder="Message">
+      </md-input-container>
+    </div>
+  </div>
+
+</mde-popover>
+
+<mde-popover #appPopover13="mdePopover">
+
+  <md-card style="width: 200px;">
+    <md-card-header>
+      <img md-card-avatar src="http://placehold.it/50x50/5c6bc0/000000.png">
+      <md-card-title>Header title</md-card-title>
+      <md-card-subtitle>Header subtitle</md-card-subtitle>
+    </md-card-header>
+    <md-card-actions>
+      <button md-button>Add Account</button>
+      <div class="fill"></div>
+      <button md-button>Sign out</button>
+    </md-card-actions>
+  </md-card>
+
+</mde-popover>

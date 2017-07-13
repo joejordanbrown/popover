@@ -1,0 +1,11 @@
+<ng-template>
+  <div class="mde-popover-panel" role="dialog" [class.mde-popover-overlap]="overlapTrigger"
+       [ngClass]="_classList" [ngStyle]="popoverPanelStyles" (keydown)="_handleKeydown($event)"
+       (click)="onClick()" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()"
+       [@transformPopover]="'enter'">
+    <div class="mde-popover-direction-arrow" [ngStyle]="popoverArrowStyles" *ngIf="!overlapTrigger"></div>
+    <div class="mde-popover-content" [ngStyle]="popoverContentStyles" cdkTrapFocus="focusTrapEnabled">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>

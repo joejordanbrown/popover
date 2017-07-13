@@ -1,0 +1,55 @@
+
+// @import '~@angular/material/theming';
+
+.mde-popover-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh + 48px);
+  // @include cdk-high-contrast {
+    // outline: solid 1px;
+  // }
+}
+
+.mde-popover-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.mde-popover-below {
+  .mde-popover-direction-arrow {
+    // order: 0;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom-width: 0 !important;
+    z-index: 99999;
+  }
+}
+
+.mde-popover-above {
+  .mde-popover-direction-arrow {
+    // order: 1;
+    position: absolute;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-top-width: 0 !important;
+    z-index: 99999;
+  }
+}
+
+.mde-popover-after {
+  .mde-popover-direction-arrow {
+    left: 20px;
+  }
+}
+
+.mde-popover-before {
+  .mde-popover-direction-arrow {
+    right: 20px;
+  }
+}
