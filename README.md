@@ -1,6 +1,7 @@
 # Material Extended for Angular
 [![npm version](https://badge.fury.io/js/%40material-extended%2Fmde.svg)](https://www.npmjs.com/package/%40material-extended%2Fmde)
 [![Build Status](https://travis-ci.org/material-extended/mde.svg?branch=master)](https://travis-ci.org/material-extended/mde)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Gitter](https://badges.gitter.im/material-extended/mde.svg)](https://gitter.im/material-extended/mde?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
@@ -17,16 +18,20 @@ If you'd like to contribute create an issue or pull request.
 Install npm package using:
 
 `yarn add @material-extended/mde`
-
 or
-
 `npm install @material-extended/mde`
 
+Install required packages @angular/cdk and @angular/material
+
+`yarn add @angular/cdk @angular/material`
+or
+`npm install @angular/cdk @angular/material`
 
 app.module.ts
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 
 import { AppComponent } from './app.component';
 import { MdePopoverModule } from '@material-extended/mde';
