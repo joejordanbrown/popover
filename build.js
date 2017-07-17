@@ -8,6 +8,8 @@ const ngc = require('@angular/compiler-cli/src/main').main;
 const rollup = require('rollup');
 const uglify = require('rollup-plugin-uglify');
 const sourcemaps = require('rollup-plugin-sourcemaps');
+const nodeResolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 const execa = require('execa');
 
 const inlineResources = require('./inline-resources');
@@ -69,7 +71,11 @@ return Promise.resolve()
         '@angular/core'
       ],
       plugins: [
-        sourcemaps()
+        commonjs({
+          include: ['node_modules/rxjs/**']
+        }),
+        sourcemaps(),
+        nodeResolve({ jsnext: true, module: true })
       ]
     };
 
