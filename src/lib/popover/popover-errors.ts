@@ -6,8 +6,8 @@ export function throwMdePopoverMissingError() {
   throw Error(`mde-popover-trigger: must pass in an mde-popover instance.
 
     Example:
-      <mde-popover #popover="mdPopover"></mde-popover>
-      <button [mdPopoverTriggerFor]="popover"></button>`);
+      <mde-popover #popover="mdePopover"></mde-popover>
+      <button [mdePopoverTriggerFor]="popover"></button>`);
 }
 
 /**
@@ -17,7 +17,7 @@ export function throwMdePopoverMissingError() {
  */
 export function throwMdePopoverInvalidPositionX() {
   throw Error(`x-position value must be either 'before' or after'.
-      Example: <mde-popover x-position="before" #popover="mdPopover"></mde-popover>`);
+      Example: <mde-popover mdePopoverPositionX="before" #popover="mdePopover"></mde-popover>`);
 }
 
 /**
@@ -27,5 +27,5 @@ export function throwMdePopoverInvalidPositionX() {
  */
 export function throwMdePopoverInvalidPositionY() {
   throw Error(`y-position value must be either 'above' or below'.
-      Example: <mde-popover y-position="above" #popover="mdPopover"></mde-popover>`);
+      Example: <mde-popover mdePopoverPositionY="above" #popover="mdePopover"></mde-popover>`);
 }
