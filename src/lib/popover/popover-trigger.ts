@@ -2,7 +2,7 @@ import {
   AfterViewInit,
   Directive,
   ElementRef,
-  EventEmitter, Inject,
+  EventEmitter,
   Input,
   OnDestroy,
   Optional,
@@ -29,7 +29,7 @@ import { throwMdePopoverMissingError } from './popover-errors';
 
 
 /**
- * This directive is intended to be used in conjunction with an md-popover tag.  It is
+ * This directive is intended to be used in conjunction with an mde-popover tag.  It is
  * responsible for toggling the display of the provided popover instance.
  */
 @Directive({
@@ -47,6 +47,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
     private _portal: TemplatePortal;
     private _overlayRef: OverlayRef | null = null;
     private _popoverOpen: boolean = false;
+    private _halt: boolean = false;
     private _backdropSubscription: Subscription;
     private _positionSubscription: Subscription;
 
@@ -188,6 +189,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
     }
 
     onMouseOver() {
+      this._halt = false;
       if (this.popover.triggerEvent === 'hover') {
           this._mouseoverTimer = setTimeout(() => {
               this.openPopover();
@@ -197,17 +199,19 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
 
     onMouseLeave() {
       if (this.popover.triggerEvent === 'hover') {
-          if (this._mouseoverTimer) {
-              clearTimeout(this._mouseoverTimer);
-              this._mouseoverTimer = null;
-          }
-          if (this._popoverOpen) {
-              setTimeout(() => {
-                  if (!this.popover.closeDisabled) {
-                      this.closePopover();
-                  }
-              }, this.popover.leaveDelay);
-          }
+        if (this._mouseoverTimer) {
+            clearTimeout(this._mouseoverTimer);
+            this._mouseoverTimer = null;
+        }
+        if (this._popoverOpen) {
+            setTimeout(() => {
+                if (!this.popover.closeDisabled) {
+                    this.closePopover();
+                }
+            }, this.popover.leaveDelay);
+        } else {
+          this._halt = true;
+        }
       }
     }
 
@@ -218,7 +222,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
 
     /** Opens the popover. */
     openPopover(): void {
-        if (!this._popoverOpen) {
+        if (!this._popoverOpen && !this._halt) {
             this._createOverlay().attach(this._portal);
 
             /** Only subscribe to backdrop if trigger event is click */

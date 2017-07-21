@@ -51,6 +51,8 @@ module.exports = function (config) {
       { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: false },
 
+      'node_modules/@angular/material/prebuilt-themes/indigo-pink.css',
+
       { pattern: 'src/demo/systemjs-angular-loader.js', included: false, watched: false },
 
       'karma-test-shim.js', // optionally extend SystemJS mapping e.g., with barrels
@@ -77,6 +79,9 @@ module.exports = function (config) {
 
     exclude: [],
     preprocessors: {},
+    mime: {
+      'text/x-typescript': ['ts','tsx']
+    },
     reporters: ['progress', 'kjhtml'],
 
     port: 9876,

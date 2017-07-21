@@ -27,6 +27,8 @@ Install required packages @angular/cdk and @angular/material
 or
 `npm install @angular/cdk @angular/material`
 
+Remember to import Material2 theme.
+
 app.module.ts
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';

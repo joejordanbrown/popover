@@ -44,7 +44,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy {
   private _positionY: MdePopoverPositionY = 'below';
   private _triggerEvent: MdePopoverTriggerEvent = 'hover';
   private _enterDelay: number = 200;
-  private _leaveDelay: number = 0;
+  private _leaveDelay: number = 200;
   private _overlapTrigger: boolean = true;
   private _targetOffsetX: number = 0;
   private _targetOffsetY: number = 0;
@@ -111,8 +111,8 @@ export class MdePopover implements MdePopoverPanel, OnDestroy {
 
   /** Popover leave delay */
   @Input('mdePopoverLeaveDelay')
-  get leaveDelay(): number { return this._enterDelay; }
-  set leaveDelay(v: number) { this._enterDelay = v; }
+  get leaveDelay(): number { return this._leaveDelay; }
+  set leaveDelay(v: number) { this._leaveDelay = v; }
 
   /** Popover overlap trigger */
   @Input('mdePopoverOverlapTrigger')
