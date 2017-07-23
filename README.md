@@ -13,8 +13,26 @@ Angular Material Extended is currently in alpha.
 This was originally created for demo purposed for a angular/material issue feature request.
 Issue can be found at [angular/material2#2691](https://github.com/angular/material2/issues/2691)
 
-
 If you'd like to contribute create an issue or pull request.
+
+
+
+### Examples
+
+**Standard popover**
+
+![image](https://cloud.githubusercontent.com/assets/10200431/22394189/02e9b21e-e511-11e6-9f91-c6b470a6b212.png)
+
+
+![image](https://cloud.githubusercontent.com/assets/10200431/22394186/e21a235c-e510-11e6-9cde-948b1a4382bc.png)
+
+**Google+ style popover**
+
+![image](https://cloud.githubusercontent.com/assets/10200431/22397870/4f27ddba-e573-11e6-943f-2d737b59d39e.png)
+
+
+
+
 
 ### Installation
 Install npm package using:
