@@ -36,7 +36,7 @@ import { throwMdePopoverMissingError } from './popover-errors';
   selector: '[mdePopoverTriggerFor]',
   host: {
     'aria-haspopup': 'true',
-    '(mouseover)': 'onMouseOver()',
+    '(mouseenter)': 'onMouseEnter()',
     '(mousedown)': '_handleMousedown($event)',
     '(mouseleave)': 'onMouseLeave()',
     '(click)': 'onClick()',
@@ -188,7 +188,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
       }
     }
 
-    onMouseOver() {
+    onMouseEnter() {
       this._halt = false;
       if (this.popover.triggerEvent === 'hover') {
           this._mouseoverTimer = setTimeout(() => {
