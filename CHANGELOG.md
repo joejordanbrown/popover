@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0-alpha.8"></a>
+# [0.1.0-alpha.8](https://github.com/material-extended/mde/compare/v0.1.0-alpha.7...v0.1.0-alpha.8) (2017-07-26)
+
+
+### Bug Fixes
+
+* **popover:** fixed multiple popover issue [#4](https://github.com/material-extended/mde/issues/4) ([92c9f40](https://github.com/material-extended/mde/commit/92c9f40))
+
+
+
 <a name="0.1.0-alpha.7"></a>
 # [0.1.0-alpha.7](https://github.com/material-extended/mde/compare/v0.1.0-alpha.6...v0.1.0-alpha.7) (2017-07-24)
 
