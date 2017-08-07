@@ -1,1 +1,1 @@
-export { MdePopoverModule } from './popover/index';
+export * from './popover/index';
