@@ -51,6 +51,7 @@ The popover can be be forced to not overlap the trigger using `[mdePopoverOverla
 The popover positioning by default is calculated from the trigger element.
 You can override positioning by referencing another component `[mdePopoverTargetAt]="templateRef"`.
 This allows you to have multiple popovers positioned in the same place. See example app [here](https://uixd.co.uk/open-source-software/material-extended/demo).
+ 
 
 ```html
 <mde-popover #appPopoverNotifications="mdePopover">
@@ -62,7 +63,7 @@ This allows you to have multiple popovers positioned in the same place. See exam
   <button md-button> Logout </button>
 </mde-popover>
 
-<md-toolbar>
+<md-toolbar #appToolbar>
 
   <button md-button [mdePopoverTriggerFor]="appPopoverNotifications" [mdePopoverTargetAt]="appToolbar">
      <mde-icon>notifications</mde-icon>
@@ -73,6 +74,58 @@ This allows you to have multiple popovers positioned in the same place. See exam
   </button>
 
 </md-toolbar>
+```
+
+
+### Popover position target native element with directive
+When targeting a native element or a component that doesn't expose the ElementRef.
+
+```html
+<mde-popover #appPopover1="mdePopover">
+  Popover one content.
+</mde-popover>
+
+<mde-popover #appPopover2="mdePopover">
+  Popover two content.
+</mde-popover>
+
+<div mdePopoverTarget #appElement="mdePopoverTarget">
+
+  <button md-button [mdePopoverTriggerFor]="appPopover1" [mdePopoverTargetAt]="appElement">
+     Show Popover one
+  </button>
+  
+  <button md-button [mdePopoverTriggerFor]="appPopover2" [mdePopoverTargetAt]="appElement">
+     Show Popover two
+  </button>
+  
+</div>
+```
+
+
+### Popover position target with mde-popover-target component
+You can use the `<mde-popover-target>` as the target reference.
+
+```html
+<mde-popover #appPopover1="mdePopover">
+  Popover one content.
+</mde-popover>
+
+<mde-popover #appPopover2="mdePopover">
+  Popover two content.
+</mde-popover>
+
+<mde-popover-target #appElement>
+
+  <button md-button [mdePopoverTriggerFor]="appPopover1" [mdePopoverTargetAt]="appElement">
+     Show Popover one
+  </button>
+  
+  <button md-button [mdePopoverTriggerFor]="appPopover2" [mdePopoverTargetAt]="appElement">
+     Show Popover two
+  </button>
+  
+</mde-popover-target>
 ```
 
 ### Popover FocusTrap
