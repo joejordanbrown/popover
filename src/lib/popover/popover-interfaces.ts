@@ -1,5 +1,5 @@
 import { ElementRef, EventEmitter, TemplateRef, ViewContainerRef } from '@angular/core';
-import {MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent} from './popover-types';
+import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
 
 export interface MdePopoverPanel {
     positionX: MdePopoverPositionX;

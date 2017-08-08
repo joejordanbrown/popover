@@ -24,6 +24,6 @@ export { MdePopover } from './popover';
 export { MdePopoverTrigger } from './popover-trigger';
 export { MdePopoverTarget } from './popover-target';
 export { MdePopoverPanel, MdeTarget } from './popover-interfaces';
-export { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
+// export { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
 export { transformPopover } from './popover-animations';
 
