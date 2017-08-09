@@ -19,13 +19,14 @@ via application of the `mdePopoverTriggerFor` directive:
 ### Toggling the popover programmatically
 The popover exposes an API to open/close programmatically. Please note that in this case, an 
 `mdePopoverTriggerFor` directive is still necessary to attach the popover to a trigger element in the DOM.
+You can disable the default triggerEvent by setting to `none`.
 
 ```ts
 class MyComponent {
-  @ViewChild(MdPopoverTrigger) trigger: MdPopoverTrigger;
+  @ViewChild(MdePopoverTrigger) trigger: MdePopoverTrigger;
 
   someMethod() {
-    this.trigger.openPopover();
+    this.trigger.togglePopover();
   }
 }
 ```
@@ -115,7 +116,7 @@ You can use the `<mde-popover-target>` as the target reference.
   Popover two content.
 </mde-popover>
 
-<mde-popover-target #appElement>
+<mde-popover-target #appElement="mdePopoverTarget">
 
   <button md-button [mdePopoverTriggerFor]="appPopover1" [mdePopoverTargetAt]="appElement">
      Show Popover one
@@ -160,7 +161,7 @@ The popover can be be forced to not focus trap using `[mdeFocusTrapEnabled]="fal
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | @Input('mdePopoverPositionX') positionX           | Position of the popover in the X axis.                                                                                                                                                                                               |
 | @Input('mdePopoverPositionY') positionY           | Position of the popover in the Y axis.                                                                                                                                                                                               |
-| @Input('mdePopoverTriggerOn') triggerEvent        | Event for triggering popover.                                                                                                                                                                                                        |
+| @Input('mdePopoverTriggerOn') triggerEvent        | Event for triggering popover click, hover and none. Default: click                                                                                                                                                                   |
 | @Input('mdePopoverEnterDelay') enterDelay         | Delay for popover before enters                                                                                                                                                                                                      |
 | @Input('mdePopoverLeaveDelay') leaveDelay         | Delay for popover before leaves                                                                                                                                                                                                      |
 | @Input('mdePopoverOverlapTrigger') overlapTrigger | Whether the popover should overlap its trigger.                                                                                                                                                                                      |
@@ -203,7 +204,7 @@ This directive is intended to be used in conjunction with an mde-popover tag. It
 | @Input('mdePopoverTargetAt') targetElement        | References the popover target instance that the popover positioning is associated with. |
 | @Input('mdePopoverPositionX') positionX           | Position of the popover in the X axis.                                                  |
 | @Input('mdePopoverPositionY') positionY           | Position of the popover in the Y axis.                                                  |
-| @Input('mdePopoverTriggerOn') triggerEvent        | Event for triggering popover, hover or click. Default: click                            |
+| @Input('mdePopoverTriggerOn') triggerEvent        | Event for triggering popover click, hover and none. Default: click                      |
 | @Input('mdePopoverEnterDelay') enterDelay         | Delay for popover before enters                                                         |
 | @Input('mdePopoverLeaveDelay') leaveDelay         | Delay for popover before leaves                                                         |
 | @Input('mdePopoverOverlapTrigger') overlapTrigger | Whether the popover should overlap its trigger.                                         |
