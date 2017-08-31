@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MdCommonModule, MdRippleModule } from '@angular/material';
-
 import { OverlayModule } from '@angular/cdk/overlay';
 
 import { MdePopover } from './popover';
@@ -12,11 +10,9 @@ import { MdePopoverTarget } from './popover-target';
 @NgModule({
   imports: [
     OverlayModule,
-    CommonModule,
-    MdRippleModule,
-    MdCommonModule,
+    CommonModule
   ],
-  exports: [MdePopover, MdePopoverTrigger, MdePopoverTarget, MdCommonModule],
+  exports: [MdePopover, MdePopoverTrigger, MdePopoverTarget],
   declarations: [MdePopover, MdePopoverTrigger, MdePopoverTarget],
 })
 export class MdePopoverModule {}

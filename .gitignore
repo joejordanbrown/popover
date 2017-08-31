@@ -30,4 +30,5 @@ node_modules
 /libpeerconnection.log
 npm-debug.log
 testem.log
+-/.chrome
 src/demo-angular-cli
