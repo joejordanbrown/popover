@@ -12,7 +12,7 @@ import {
   ChangeDetectionStrategy, Optional, Inject, ContentChildren, ContentChild, QueryList, ViewContainerRef,
 } from '@angular/core';
 
-import { ESCAPE, FocusTrap, FocusTrapFactory, FocusTrapDirective } from '@angular/cdk';
+import { ESCAPE, FocusTrap, FocusTrapFactory, FocusTrapDirective } from '@angular/material';
 
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
 import { throwMdePopoverInvalidPositionX, throwMdePopoverInvalidPositionY } from './popover-errors';

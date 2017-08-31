@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { A11yModule } from '@angular/cdk';
-import { OverlayModule, MdCommonModule, MdRippleModule } from '@angular/material';
+import { MdCommonModule, MdRippleModule, A11yModule } from '@angular/material';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 import { MdePopover } from './popover';
 import { MdePopoverTrigger } from './popover-trigger';

@@ -9,7 +9,7 @@ import {
   Output,
   ViewContainerRef,
 } from '@angular/core';
-import { TemplatePortal, isFakeMousedownFromScreenReader } from '@angular/cdk';
+import { TemplatePortal, isFakeMousedownFromScreenReader } from '@angular/material';
 import {
     Directionality,
     Direction,
@@ -44,7 +44,7 @@ import { throwMdePopoverMissingError } from './popover-errors';
   exportAs: 'mdePopoverTrigger'
 })
 export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
-    private _portal: TemplatePortal;
+    private _portal: TemplatePortal<any>;
     private _overlayRef: OverlayRef | null = null;
     private _popoverOpen: boolean = false;
     private _halt: boolean = false;
