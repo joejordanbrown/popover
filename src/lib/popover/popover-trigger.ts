@@ -9,17 +9,20 @@ import {
   Output,
   ViewContainerRef,
 } from '@angular/core';
-import { TemplatePortal, isFakeMousedownFromScreenReader } from '@angular/cdk';
+
+
+import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
+import { Direction, Directionality } from '@angular/cdk/bidi';
 import {
-    Directionality,
-    Direction,
-    Overlay,
-    OverlayState,
-    OverlayRef,
-    ConnectedPositionStrategy,
-    HorizontalConnectionPos,
-    VerticalConnectionPos,
-} from '@angular/material';
+  ConnectedPositionStrategy,
+  Overlay,
+  OverlayRef,
+  OverlayState,
+  HorizontalConnectionPos,
+  VerticalConnectionPos
+} from '@angular/cdk/overlay';
+import { TemplatePortal } from '@angular/cdk/portal';
+
 import { Subscription } from 'rxjs/Subscription';
 
 import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
@@ -44,7 +47,7 @@ import { throwMdePopoverMissingError } from './popover-errors';
   exportAs: 'mdePopoverTrigger'
 })
 export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
-    private _portal: TemplatePortal;
+    private _portal: TemplatePortal<any>;
     private _overlayRef: OverlayRef | null = null;
     private _popoverOpen: boolean = false;
     private _halt: boolean = false;

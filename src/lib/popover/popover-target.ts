@@ -1,4 +1,4 @@
-import { AfterViewInit, Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: 'mde-popover-target, [mdePopoverTarget]',

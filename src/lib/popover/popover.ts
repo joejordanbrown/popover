@@ -1,5 +1,4 @@
 import {
-  AfterContentInit,
   Component,
   EventEmitter,
   Input,
@@ -9,16 +8,16 @@ import {
   ViewChild,
   ViewEncapsulation,
   ElementRef,
-  ChangeDetectionStrategy, Optional, Inject, ContentChildren, ContentChild, QueryList, ViewContainerRef,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 
-import { ESCAPE, FocusTrap, FocusTrapFactory, FocusTrapDirective } from '@angular/cdk';
+import { ESCAPE } from '@angular/cdk/keycodes';
 
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
 import { throwMdePopoverInvalidPositionX, throwMdePopoverInvalidPositionY } from './popover-errors';
 import { MdePopoverPanel } from './popover-interfaces';
 import { transformPopover } from './popover-animations';
-import { DOCUMENT } from '@angular/common';
+
 import { AnimationEvent } from '@angular/animations';
 
 
