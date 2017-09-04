@@ -12,7 +12,7 @@ via application of the `mdePopoverTriggerFor` directive:
 </mde-popover>
 
 <button md-button [mdePopoverTriggerFor]="appPopover">
-   <mde-icon>more_vert</mde-icon>
+   <md-icon>more_vert</md-icon>
 </button>
 ```
 
@@ -43,7 +43,7 @@ The popover can be be forced to not overlap the trigger using `[mdePopoverOverla
 </mde-popover>
 
 <button md-button [mdePopoverTriggerFor]="appPopover">
-   <mde-icon>more_vert</mde-icon>
+   <md-icon>more_vert</md-icon>
 </button>
 ```
 
@@ -67,11 +67,11 @@ This allows you to have multiple popovers positioned in the same place. See exam
 <md-toolbar #appToolbar>
 
   <button md-button [mdePopoverTriggerFor]="appPopoverNotifications" [mdePopoverTargetAt]="appToolbar">
-     <mde-icon>notifications</mde-icon>
+     <md-icon>notifications</md-icon>
   </button>
   
   <button md-button [mdePopoverTriggerFor]="appPopoverAccount" [mdePopoverTargetAt]="appToolbar">
-     <mde-icon>face</mde-icon>
+     <md-icon>face</md-icon>
   </button>
 
 </md-toolbar>
@@ -140,7 +140,7 @@ The popover can be be forced to not focus trap using `[mdeFocusTrapEnabled]="fal
 </mde-popover>
 
 <button md-button [mdePopoverTriggerFor]="appPopoverAccount" [mdeFocusTrapEnabled]="false">
-   <mde-icon>face</mde-icon>
+   <md-icon>face</md-icon>
 </button>
 ```
 

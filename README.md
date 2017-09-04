@@ -86,6 +86,10 @@ Once a document is created the component can be refactored and released as beta 
 | popover | In-progress ([popover demo](https://uixd.co.uk/open-source-software/material-extended/demo)) | [Docs](https://github.com/material-extended/mde/blob/master/src/lib/popover/popover.md) |
 
 
+### Issues
+
+Please report bugs and issues [here](https://github.com/material-extended/mde/issues).
+
 ### License
 MIT © [Joe Jordan Brown](https://github.com/joejordanbrown)
 
