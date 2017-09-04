@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-alpha.1"></a>
+# [1.0.0-alpha.1](https://github.com/material-extended/mde/compare/v1.0.0-alpha.0...v1.0.0-alpha.1) (2017-09-04)
+
+
+### Bug Fixes
+
+* **build:** include secondary entry-points of the CDK package ([2726c7b](https://github.com/material-extended/mde/commit/2726c7b))
+
+
+
 <a name="1.0.0-alpha.0"></a>
 # [1.0.0-alpha.0](https://github.com/material-extended/mde/compare/v0.1.0-alpha.13...v1.0.0-alpha.0) (2017-08-31)
 
