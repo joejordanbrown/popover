@@ -64,8 +64,23 @@ return Promise.resolve()
         // the window object.
         // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals for more.
         '@angular/core': 'ng.core',
-        '@angular/cdk': 'ng.cdk',
         '@angular/material': 'ng.material',
+        '@angular/cdk': 'ng.cdk',
+
+        // Include secondary entry-points of the CDK package
+        '@angular/cdk/a11y': 'ng.cdk.a11y',
+        '@angular/cdk/bidi': 'ng.cdk.bidi',
+        '@angular/cdk/coercion': 'ng.cdk.coercion',
+        '@angular/cdk/collections': 'ng.cdk.collections',
+        '@angular/cdk/keycodes': 'ng.cdk.keycodes',
+        '@angular/cdk/observers': 'ng.cdk.observers',
+        '@angular/cdk/overlay': 'ng.cdk.overlay',
+        '@angular/cdk/platform': 'ng.cdk.platform',
+        '@angular/cdk/portal': 'ng.cdk.portal',
+        '@angular/cdk/rxjs': 'ng.cdk.rxjs',
+        '@angular/cdk/scrolling': 'ng.cdk.scrolling',
+        '@angular/cdk/stepper': 'ng.cdk.stepper',
+        '@angular/cdk/table': 'ng.cdk.table'
       },
       external: [
         // List of dependencies
