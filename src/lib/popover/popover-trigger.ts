@@ -17,7 +17,7 @@ import {
   ConnectedPositionStrategy,
   Overlay,
   OverlayRef,
-  OverlayState,
+  OverlayConfig,
   HorizontalConnectionPos,
   VerticalConnectionPos
 } from '@angular/cdk/overlay';
@@ -339,11 +339,11 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
     }
 
     /**
-    * This method builds the configuration object needed to create the overlay, the OverlayState.
-    * @returns OverlayState
+    * This method builds the configuration object needed to create the overlay, the OverlayConfig.
+    * @returns OverlayConfig
     */
-    private _getOverlayConfig(): OverlayState {
-        const overlayState = new OverlayState();
+    private _getOverlayConfig(): OverlayConfig {
+        const overlayState = new OverlayConfig();
         overlayState.positionStrategy = this._getPosition()
                                             .withDirection(this.dir);
 
