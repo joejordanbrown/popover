@@ -47,6 +47,33 @@ The popover can be be forced to not overlap the trigger using `[mdePopoverOverla
 </button>
 ```
 
+
+
+
+### Disabling the Trigger
+
+The trigger element can be disabled using the attribute `[disabled]`.
+If the element doesn't nativly support the disabled attribute, 
+you will need to apply the following CSS to add that functionality to the element.
+This will be required to support the usage of disabled on elements such as `a, div, custom-element`.
+
+```css
+/* Elements with disabled attribute will have pointer events disabled */
+[disabled] {
+  pointer-events: none;
+}
+
+/* This prevents it from being disabled when it has the disabled attribute with a value of false. */
+[disabled="false"] {
+  pointer-events: initial;
+}
+```
+
+
+
+
+
+
 ### Popover position target reference
 
 The popover positioning by default is calculated from the trigger element.
