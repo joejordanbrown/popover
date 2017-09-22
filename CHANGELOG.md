@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-alpha.4"></a>
+# [1.0.0-alpha.4](https://github.com/material-extended/mde/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2017-09-22)
+
+
+### Bug Fixes
+
+* **docs:** fix incorrect component name ([0939cb6](https://github.com/material-extended/mde/commit/0939cb6))
+* **docs:** update popover documentation link ([a2636f4](https://github.com/material-extended/mde/commit/a2636f4))
+* **overlay:** OverlayState has been renamed to OverlayConfig in CDK ([0103c0f](https://github.com/material-extended/mde/commit/0103c0f))
+
+
+
 <a name="1.0.0-alpha.3"></a>
 # [1.0.0-alpha.3](https://github.com/material-extended/mde/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2017-09-04)
 
