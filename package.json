@@ -1,6 +1,6 @@
 {
   "name": "@material-extended/mde",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Angular Material Extended",
   "main": "./bundles/mde.umd.js",
   "module": "./mde.es5.js",
