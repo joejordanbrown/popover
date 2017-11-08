@@ -1,31 +1,31 @@
-<md-toolbar style="text-align: right" color="primary" #appPopoverPosition>
+<mat-toolbar style="text-align: right" color="primary" #appPopoverPosition>
   <h1>Material Extended - Popover</h1>
   <div class="fill"></div>
-  <a md-button href="https://github.com/material-extended/mde" target="_blank">
+  <a mat-button href="https://github.com/material-extended/mde" target="_blank">
     <img src="../github-circle-white-transparent.svg">
     Github
   </a>
   <div class="fill"></div>
-  <button md-icon-button color=""
+  <button mat-icon-button color=""
           [mdePopoverTriggerFor]="appPopover9" [mdePopoverTargetAt]="appPopoverPosition" mdePopoverTriggerOn="click" [mdePopoverOverlapTrigger]="false"
           [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10"
           [mdePopoverArrowOffsetX]="100" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#FFFFFF" [mdePopoverCloseOnClick]="false">
-    <md-icon>apps</md-icon>
+    <mat-icon>apps</mat-icon>
   </button>
-  <button md-icon-button color=""
+  <button mat-icon-button color=""
           [mdePopoverTriggerFor]="appPopover10" [mdePopoverTargetAt]="appPopoverPosition" mdePopoverTriggerOn="click"
           [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10"
           [mdePopoverArrowOffsetX]="60" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#e5e5e5" [mdePopoverCloseOnClick]="false">
-    <md-icon>notifications</md-icon>
+    <mat-icon>notifications</mat-icon>
   </button>
-  <button md-icon-button color="white"
+  <button mat-icon-button color="white"
           [mdePopoverTriggerFor]="appPopover11" [mdePopoverTargetAt]="appPopoverPosition" mdePopoverTriggerOn="click"
           [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10"
           [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#FFFFFF" [mdePopoverCloseOnClick]="false">
-    <md-icon>face</md-icon>
+    <mat-icon>face</mat-icon>
   </button>
 
-</md-toolbar>
+</mat-toolbar>
 
 <div class="content">
 
@@ -92,66 +92,66 @@
 
     <div style="width: 300px; margin: 0 auto;">
 
-      <button md-raised-button [mdePopoverTriggerFor]="appPopover1" mdePopoverPositionX="before" mdePopoverPositionY="above" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
-      <button md-raised-button color="warn" [mdePopoverTriggerFor]="appPopover2" mdePopoverPositionX="after" mdePopoverPositionY="above" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
-      <button md-raised-button color="primary" [mdePopoverTriggerFor]="appPopover3" mdePopoverPositionX="before" mdePopoverPositionY="below" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
-      <button md-raised-button color="accent" [mdePopoverTriggerFor]="appPopover4" mdePopoverPositionX="after" mdePopoverPositionY="below" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+      <button mat-raised-button [mdePopoverTriggerFor]="appPopover1" mdePopoverPositionX="before" mdePopoverPositionY="above" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+      <button mat-raised-button color="warn" [mdePopoverTriggerFor]="appPopover2" mdePopoverPositionX="after" mdePopoverPositionY="above" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+      <button mat-raised-button color="primary" [mdePopoverTriggerFor]="appPopover3" mdePopoverPositionX="before" mdePopoverPositionY="below" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
+      <button mat-raised-button color="accent" [mdePopoverTriggerFor]="appPopover4" mdePopoverPositionX="after" mdePopoverPositionY="below" [mdePopoverArrowWidth]="12" [mdePopoverEnterDelay]="400" [mdePopoverOverlapTrigger]="false">Hover Popover</button>
 
     </div>
 
     <mde-popover #appPopover1="mdePopover">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
     <mde-popover #appPopover2="mdePopover">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
     <mde-popover #appPopover3="mdePopover">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
     <mde-popover #appPopover4="mdePopover">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
@@ -170,10 +170,10 @@
 
     <div style="width: 300px; margin: 0 auto;">
 
-      <button md-raised-button [mdePopoverTriggerFor]="appPopover5">Hover Popover</button>
-      <button md-raised-button color="warn" [mdePopoverTriggerFor]="appPopover6">Hover Popover</button>
-      <button md-raised-button color="primary" [mdePopoverTriggerFor]="appPopover7">Hover Popover</button>
-      <button md-raised-button color="accent" [mdePopoverTriggerFor]="appPopover8">Hover Popover</button>
+      <button mat-raised-button [mdePopoverTriggerFor]="appPopover5">Hover Popover</button>
+      <button mat-raised-button color="warn" [mdePopoverTriggerFor]="appPopover6">Hover Popover</button>
+      <button mat-raised-button color="primary" [mdePopoverTriggerFor]="appPopover7">Hover Popover</button>
+      <button mat-raised-button color="accent" [mdePopoverTriggerFor]="appPopover8">Hover Popover</button>
 
     </div>
 
@@ -181,15 +181,15 @@
                  [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
                  mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
@@ -197,15 +197,15 @@
                  [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
                  mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
@@ -213,15 +213,15 @@
                  [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
                  mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
@@ -229,15 +229,15 @@
                  [mdePopoverOverlapTrigger]="true" mdePopoverTriggerOn="hover"
                  mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="400">
 
-      <md-card style="width: 300px;">
-        <md-card-title>Card with title</md-card-title>
-        <md-card-content>
+      <mat-card style="width: 300px;">
+        <mat-card-title>Card with title</mat-card-title>
+        <mat-card-content>
           <p>This is supporting text.</p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>ACTION</button>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>ACTION</button>
+        </mat-card-actions>
+      </mat-card>
 
     </mde-popover>
 
@@ -304,9 +304,9 @@
 
 
 
-  <button class="support-button" md-fab
+  <button class="support-button" mat-fab
           [mdePopoverTriggerFor]="appPopover12" [mdePopoverArrowOffsetX]="28" [mdePopoverArrowWidth]="16" mdePopoverArrowColor="#e5e5e5" mdePopoverTriggerOn="click" [mdePopoverCloseOnClick]="false">
-    <md-icon>chat</md-icon>
+    <mat-icon>chat</mat-icon>
   </button>
 </div>
 
@@ -319,37 +319,37 @@
     <ul class="menu">
       <li>
         <a href="">
-          <md-icon>android</md-icon>
+          <mat-icon>android</mat-icon>
           <span>Android</span>
         </a>
       </li>
       <li>
         <a href="">
-          <md-icon>map</md-icon>
+          <mat-icon>map</mat-icon>
           <span>Maps</span>
         </a>
       </li>
       <li>
         <a href="">
-          <md-icon>extension</md-icon>
+          <mat-icon>extension</mat-icon>
           <span>Extensions</span>
         </a>
       </li>
       <li>
         <a href="">
-          <md-icon>favorite</md-icon>
+          <mat-icon>favorite</mat-icon>
           <span>Favorites</span>
         </a>
       </li>
       <li>
         <a href="">
-          <md-icon>https</md-icon>
+          <mat-icon>https</mat-icon>
           <span>Security</span>
         </a>
       </li>
       <li>
         <a href="">
-          <md-icon>verified_user</md-icon>
+          <mat-icon>verified_user</mat-icon>
           <span>Protection</span>
         </a>
       </li>
@@ -370,7 +370,7 @@
     <div class="toolbar">
       <div class="settings">
         <button button-plain mdTooltip="Settings" mdTooltipPosition="below">
-          <md-icon>settings</md-icon>
+          <mat-icon>settings</mat-icon>
         </button>
       </div>
 
@@ -380,7 +380,7 @@
 
       <div class="clear">
         <button button-plain mdTooltip="Clear All" mdTooltipPosition="below">
-          <md-icon>clear_all</md-icon>
+          <mat-icon>clear_all</mat-icon>
         </button>
       </div>
     </div>
@@ -481,18 +481,18 @@
              [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
              mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100">
 
-  <md-card style="width: 200px;">
-    <md-card-header>
-      <img md-card-avatar src="http://placehold.it/50x50/5c6bc0/000000.png">
-      <md-card-title>Header title</md-card-title>
-      <md-card-subtitle>Header subtitle</md-card-subtitle>
-    </md-card-header>
-    <md-card-actions>
-      <button md-button>Add Account</button>
+  <mat-card style="width: 200px;">
+    <mat-card-header>
+      <img mat-card-avatar src="http://placehold.it/50x50/5c6bc0/000000.png">
+      <mat-card-title>Header title</mat-card-title>
+      <mat-card-subtitle>Header subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-button>Add Account</button>
       <div class="fill"></div>
-      <button md-button>Sign out</button>
-    </md-card-actions>
-  </md-card>
+      <button mat-button>Sign out</button>
+    </mat-card-actions>
+  </mat-card>
 
 </mde-popover>
 
@@ -504,7 +504,7 @@
     <div class="toolbar">
       <div class="settings">
         <button button-plain mdTooltip="Settings" mdTooltipPosition="below">
-          <md-icon>settings</md-icon>
+          <mat-icon>settings</mat-icon>
         </button>
       </div>
 
@@ -514,7 +514,7 @@
 
       <div class="clear">
         <button button-plain mdTooltip="Close" mdTooltipPosition="below" (click)="appPopover12.close.emit();">
-          <md-icon>close</md-icon>
+          <mat-icon>close</mat-icon>
         </button>
       </div>
     </div>
@@ -603,9 +603,9 @@
     </ol>
 
     <div class="form">
-      <md-input-container style="width: 100%; margin-bottom: -10px;">
-        <input mdInput placeholder="Message">
-      </md-input-container>
+      <mat-form-field style="width: 100%; margin-bottom: -10px;">
+        <input matInput placeholder="Message">
+      </mat-form-field>
     </div>
   </div>
 
@@ -613,17 +613,17 @@
 
 <mde-popover #appPopover13="mdePopover">
 
-  <md-card style="width: 200px;">
-    <md-card-header>
-      <img md-card-avatar src="http://placehold.it/50x50/5c6bc0/000000.png">
-      <md-card-title>Header title</md-card-title>
-      <md-card-subtitle>Header subtitle</md-card-subtitle>
-    </md-card-header>
-    <md-card-actions>
-      <button md-button>Add Account</button>
+  <mat-card style="width: 200px;">
+    <mat-card-header>
+      <img mat-card-avatar src="http://placehold.it/50x50/5c6bc0/000000.png">
+      <mat-card-title>Header title</mat-card-title>
+      <mat-card-subtitle>Header subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-button>Add Account</button>
       <div class="fill"></div>
-      <button md-button>Sign out</button>
-    </md-card-actions>
-  </md-card>
+      <button mat-button>Sign out</button>
+    </mat-card-actions>
+  </mat-card>
 
 </mde-popover>

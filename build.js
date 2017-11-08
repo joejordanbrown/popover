@@ -33,15 +33,13 @@ return Promise.resolve()
     .then(() => console.log('Inlining succeeded.'))
   )
   // Compile to ES2015.
-  .then(() => ngc({ project: `${tempLibFolder}/tsconfig.lib.json` })
+  .then(() => ngc([ '--project', `${tempLibFolder}/tsconfig.lib.json` ]))
     .then(exitCode => exitCode === 0 ? Promise.resolve() : Promise.reject())
     .then(() => console.log('ES2015 compilation succeeded.'))
-  )
   // Compile to ES5.
-  .then(() => ngc({ project: `${tempLibFolder}/tsconfig.es5.json` })
+  .then(() => ngc([ '--project', `${tempLibFolder}/tsconfig.es5.json` ]))
     .then(exitCode => exitCode === 0 ? Promise.resolve() : Promise.reject())
     .then(() => console.log('ES5 compilation succeeded.'))
-  )
   // Copy typings and metadata to `dist/` folder.
   .then(() => Promise.resolve()
     .then(() => _relativeCopy('**/*.d.ts', es2015OutputFolder, distFolder))
@@ -68,10 +66,12 @@ return Promise.resolve()
         '@angular/cdk': 'ng.cdk',
         // Include secondary entry-points of the CDK package
         '@angular/cdk/a11y': 'ng.cdk.a11y',
+        '@angular/cdk/accordion': 'ng.cdk.accordion',
         '@angular/cdk/bidi': 'ng.cdk.bidi',
         '@angular/cdk/coercion': 'ng.cdk.coercion',
         '@angular/cdk/collections': 'ng.cdk.collections',
         '@angular/cdk/keycodes': 'ng.cdk.keycodes',
+        '@angular/cdk/layout': 'ng.cdk.layout',
         '@angular/cdk/observers': 'ng.cdk.observers',
         '@angular/cdk/overlay': 'ng.cdk.overlay',
         '@angular/cdk/platform': 'ng.cdk.platform',
@@ -89,10 +89,12 @@ return Promise.resolve()
         '@angular/cdk',
         // Include secondary entry-points of the CDK package
         '@angular/cdk/a11y',
+        '@angular/cdk/accordion',
         '@angular/cdk/bidi',
         '@angular/cdk/coercion',
         '@angular/cdk/collections',
         '@angular/cdk/keycodes',
+        '@angular/cdk/layout',
         '@angular/cdk/observers',
         '@angular/cdk/overlay',
         '@angular/cdk/platform',

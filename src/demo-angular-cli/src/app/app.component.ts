@@ -1,5 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
-import { OverlayContainer } from '@angular/material';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 
 export const DEFAULT_THEME = 'deeppurple-amber-theme';
@@ -16,15 +16,16 @@ export class AppComponent {
     return this._themeClass;
   }
   set themeClass(v) {
-    this._themeClass = v;
-    if (this._themeClass) {
-      this.overlayContainer.themeClass = v;
+    if (v) {
+      this.overlayContainer.getContainerElement().classList.remove(this._themeClass);
+      this.overlayContainer.getContainerElement().classList.add(v);
+      this._themeClass = v;
     }
   }
 
 
   constructor(private overlayContainer: OverlayContainer) {
-    this.overlayContainer.themeClass = this.themeClass;
+    this.overlayContainer.getContainerElement().classList.add(this.themeClass);
   }
 
 }

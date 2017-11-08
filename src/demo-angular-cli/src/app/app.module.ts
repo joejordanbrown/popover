@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MdButtonModule, MdIconModule, MdInputModule, MdToolbarModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatInputModule, MatToolbarModule } from '@angular/material';
 
 // import { MdePopoverModule } from '../../../../dist/mde';
 // import { MdePopoverModule } from '../../../../dist';
@@ -38,14 +38,12 @@ import { ErrorModule } from './pages/error/error.module';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    MdToolbarModule,
-    MdInputModule,
-    MdButtonModule,
-    MdIconModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
     MdePopoverModule,
-
     AppRoutingModule,
-
     PagesModule,
     ErrorModule
   ],
