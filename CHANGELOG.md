@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-alpha.6"></a>
+# [1.0.0-alpha.6](https://github.com/material-extended/mde/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2017-11-13)
+
+
+### Bug Fixes
+
+* **MdePopoverTrigger:** change _elementRef to public ([b5e9867](https://github.com/material-extended/mde/commit/b5e9867))
+
+
+
 <a name="1.0.0-alpha.5"></a>
 # [1.0.0-alpha.5](https://github.com/material-extended/mde/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2017-11-08)
 
