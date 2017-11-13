@@ -113,7 +113,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
     @Output() onPopoverClose = new EventEmitter<void>();
 
 
-    constructor(private _overlay: Overlay, private _element: ElementRef,
+    constructor(private _overlay: Overlay, public _elementRef: ElementRef,
               private _viewContainerRef: ViewContainerRef,
               @Optional() private _dir: Directionality) { }
 
@@ -262,7 +262,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
 
     /** Focuses the popover trigger. */
     focus() {
-        this._element.nativeElement.focus();
+        this._elementRef.nativeElement.focus();
     }
 
     /** The text direction of the containing app. */
@@ -419,7 +419,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy {
          * Useful for sticking popover to parent element and offsetting arrow to trigger element.
          * If undefined defaults to the trigger element reference.
          */
-        let element = this._element;
+        let element = this._elementRef;
         if (typeof this.targetElement !== 'undefined') {
             this.popover.containerPositioning = true;
             element = this.targetElement._elementRef;
