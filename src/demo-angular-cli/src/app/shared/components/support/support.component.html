@@ -1,0 +1,122 @@
+<div class="google-chat">
+  <div class="toolbar">
+    <div class="settings">
+      <button button-plain mdTooltip="Settings" mdTooltipPosition="below">
+        <mat-icon>settings</mat-icon>
+      </button>
+    </div>
+
+    <div class="title">
+      Lounge
+    </div>
+
+    <div class="clear">
+      <button button-plain mdTooltip="Close" mdTooltipPosition="below">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <ol class="discussion">
+    <li class="other">
+      <div class="avatar">
+        <img src="http://placehold.it/40x40/5c6bc0/000000.png"
+             [mdePopoverTriggerFor]="userPopover" mdePopoverPositionX="after" mdePopoverPositionY="below"
+             [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+             [mdePopoverEnterDelay]="200" />
+      </div>
+      <div class="messages">
+        <p>I need you to complete this by today if possible.</p>
+        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+      </div>
+    </li>
+    <li class="self">
+      <div class="avatar">
+        <img src="http://placehold.it/40x40/f44336/000000.png"
+             [mdePopoverTriggerFor]="userPopover" mdePopoverPositionX="before" mdePopoverPositionY="below"
+             [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+             [mdePopoverEnterDelay]="200" />
+      </div>
+      <div class="messages">
+        <p>That should be fine.</p>
+        <p>It's a pretty small task.</p>
+        <time datetime="2009-11-13T20:14">50 mins</time>
+      </div>
+    </li>
+    <li class="other">
+      <div class="avatar">
+        <img src="http://placehold.it/40x40/5c6bc0/000000.png"
+             [mdePopoverTriggerFor]="userPopover" mdePopoverPositionX="after" mdePopoverPositionY="below"
+             [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+             [mdePopoverEnterDelay]="200" />
+      </div>
+      <div class="messages">
+        <p>That's great.</p>
+        <p>Ping me once you've completed it.</p>
+        <time datetime="2009-11-13T20:14">49 mins</time>
+      </div>
+    </li>
+    <li class="self">
+      <div class="avatar">
+        <img src="http://placehold.it/40x40/f44336/000000.png"
+             [mdePopoverTriggerFor]="userPopover" mdePopoverPositionX="before" mdePopoverPositionY="below"
+             [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#000000"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
+             [mdePopoverEnterDelay]="200" />
+      </div>
+      <div class="messages">
+        <p>I will do!</p>
+        <time datetime="2009-11-13T20:14">45 mins</time>
+      </div>
+    </li>
+    <li class="self">
+      <div class="avatar">
+        <img src="http://placehold.it/40x40/f44336/000000.png"
+             [mdePopoverTriggerFor]="userPopover" mdePopoverPositionX="before" mdePopoverPositionY="below"
+             [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+             [mdePopoverEnterDelay]="200" />
+      </div>
+      <div class="messages">
+        <p>Quick question</p>
+        <p>What colour should it use?</p>
+        <time datetime="2009-11-13T20:14">37 mins</time>
+      </div>
+    </li>
+    <li class="other">
+      <div class="avatar">
+        <img src="http://placehold.it/40x40/5c6bc0/000000.png"
+             [mdePopoverTriggerFor]="userPopover" mdePopoverPositionX="after" mdePopoverPositionY="below"
+             [mdePopoverArrowOffsetX]="20" [mdePopoverArrowWidth]="8" mdePopoverArrowColor="#ffffff"
+             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="hover"
+             [mdePopoverEnterDelay]="200" />
+      </div>
+      <div class="messages">
+        <p>Material colours obviously :)</p>
+      </div>
+    </li>
+  </ol>
+
+  <div class="form">
+    <mat-form-field style="width: 100%; margin-bottom: -10px;">
+      <input matInput placeholder="Message">
+    </mat-form-field>
+  </div>
+</div>
+
+
+
+<mde-popover #userPopover="mdePopover">
+
+  <mat-card style="width: 200px;">
+    <mat-card-header>
+      <img mat-card-avatar src="http://placehold.it/50x50/5c6bc0/000000.png">
+      <mat-card-title>Joe Blogs</mat-card-title>
+      <mat-card-subtitle>Angular</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+</mde-popover>

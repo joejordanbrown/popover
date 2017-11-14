@@ -1,0 +1,41 @@
+<a class="btn" [href]="details?.html_url" target="_blank" mat-button="">
+  <mat-icon>remove_red_eye</mat-icon> Watch
+</a>
+<a class="social-count js-social-count" [href]="details?.html_url + '/watchers'" target="_blank" aria-label="6 users starred this repository" mat-button>
+  {{details?.subscribers_count}}
+</a>
+
+<a class="btn" [href]="details?.html_url" target="_blank" mat-button="">
+  <mat-icon>star_rate</mat-icon> Star
+</a>
+<a class="social-count" [href]="details?.html_url + '/stargazers'" target="_blank" aria-label="6 users starred this repository" mat-button>
+  {{details?.stargazers_count}}
+</a>
+<!--
+<mat-tab-group class="mat-elevation-z4">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Overview
+    </ng-template>
+    {{details | json}}
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Issues
+    </ng-template>
+    https://api.github.com/repos/material-extended/mde/issues
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Pull Requests
+    </ng-template>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let pull of pulls;">Pull here</mat-list-item>
+      <mat-list-item *ngFor="let pull of pulls;">Pull here</mat-list-item>
+      <mat-list-item *ngFor="let pull of pulls;">Pull here</mat-list-item>
+    </mat-nav-list>
+  </mat-tab>
+</mat-tab-group>
+-->

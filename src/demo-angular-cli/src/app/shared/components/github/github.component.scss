@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  max-width: 400px;
+  // width: 240px;
+  background-color: #FFFFFF;
+  // min-height: 100px;
+  padding: 40px;
+}
+
+
+.btn {
+  background-color: #eff3f6;
+  background-image: -webkit-linear-gradient(top, #fafbfc, #e4ebf0);
+  background-image: -moz-linear-gradient(top, #fafbfc, #e4ebf0);
+  background-image: linear-gradient(to bottom, #fafbfc, #e4ebf0);
+  background-repeat: repeat-x;
+  background-size: 110% 110%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFAFBFC', endColorstr='#FFE4EBF0')";
+}
+
+.btn, .social-count {
+  display: inline-block;
+  font-weight: 600;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #d1d2d3;
+  border-radius: 0.25em;
+}
+
+.btn {
+  height: 26px;
+  line-height: 26px;
+  padding: 0 10px;
+  font-size: 12px;
+  min-width: 20px;
+}
+
+.social-count {
+  height: 26px;
+  line-height: 26px;
+  background-color: #fff;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #000000;
+  min-width: 20px;
+}
+
+
+.btn mat-icon {
+  line-height: 10px;
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}

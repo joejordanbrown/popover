@@ -1,0 +1,61 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" [mdePopoverTriggerFor]="inputPopover" mdePopoverTriggerOn="none" #companyTarget="mdePopoverTrigger">
+    <input matInput placeholder="Company (disabled)" disabled value="Google" (focus)="openPopover(companyTarget, 'Your company name.')" (blur)="closePopover(companyTarget)">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0" [mdePopoverTriggerFor]="inputPopover" mdePopoverTriggerOn="none" #nameTarget="mdePopoverTrigger">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="First name" (focus)="openPopover(nameTarget, 'Your legal First Name.')" (blur)="closePopover(nameTarget)">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Long Last Name That Will Be Truncated" (focus)="openPopover(nameTarget, 'Your legal Last Name.')" (blur)="closePopover(nameTarget)">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <mde-popover #inputPopover="mdePopover"
+               mdeFocusTrapEnabled="false"
+               mdePopoverPositionY="below"
+               mdePopoverPositionX="before"
+               mdePopoverOffsetY="0" mdePopoverOffsetX="250">
+    <div class="input-popover mat-elevation-z1">
+      {{popoverText}}
+    </div>
+  </mde-popover>
+
+  <p [mdePopoverTriggerFor]="inputPopover" mdePopoverTriggerOn="none" #addressTarget="mdePopoverTrigger">
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address" (focus)="openPopover(addressTarget, 'Your home address line 1.')" (blur)="closePopover(addressTarget)">1600 Amphitheatre Pkwy</textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address 2" (focus)="openPopover(addressTarget, 'Your home address line 2.')" (blur)="closePopover(addressTarget)"></textarea>
+    </mat-form-field>
+  </p>
+
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="City" (focus)="openPopover(addressTarget, 'What\'s your home City?')" (blur)="closePopover(addressTarget)">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="State" (focus)="openPopover(addressTarget, 'What\'s your home Sate?')" (blur)="closePopover(addressTarget)">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043" (focus)="openPopover(addressTarget, 'What\'s your home Postal Code?')" (blur)="closePopover(addressTarget)">
+          <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+</form>

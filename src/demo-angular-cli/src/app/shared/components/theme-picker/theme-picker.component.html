@@ -1,0 +1,13 @@
+<div class="container" (keydown)="onItemKeydown($event)">
+  <button mat-button class="item"
+       *ngFor="let item of items; let i = index; let last = last"
+       [ngStyle]="item.styles"
+       [class.current]="theme===item.className"
+       (click)="theme=item.className"
+       [class.hover]="hovering!==null"
+       (focus)="hovering=item.className"
+       (mouseenter)="hovering=item.className"
+       (mouseleave)="hovering=null">
+    <mat-icon *ngIf="theme===item.className">check_circle</mat-icon>
+  </button>
+</div>

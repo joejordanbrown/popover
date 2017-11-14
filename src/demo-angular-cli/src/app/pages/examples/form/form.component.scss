@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc( 100vh - 64px );
+}
+
+.example-form {
+  width: 500px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.input-popover {
+  background: #ffffff;
+  padding: 20px;
+  width: 200px;
+  box-sizing: border-box;
+}

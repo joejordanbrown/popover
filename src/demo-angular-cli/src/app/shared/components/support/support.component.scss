@@ -1,0 +1,164 @@
+.google-chat {
+  background-color: #e5e5e5;
+  width: 320px;
+  box-sizing: border-box;
+  .toolbar {
+    color: #666;
+    font: 16px Roboto,arial,sans-serif;
+    height: 40px;
+    overflow: visible;
+    position: relative;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    width: 320px;
+    md-icon {
+      color: #a9a9a9;
+    }
+    [button-plain] {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+    }
+    .settings {
+      padding: 8px 0;
+      position: absolute;
+      top: 4px;
+      left: 20px;
+    }
+    .title {
+      color: #666;
+      font: 16px Roboto,arial,sans-serif;
+      line-height: 40px;
+      overflow: hidden;
+      padding: 0 35px;
+      text-align: center;
+      text-overflow: ellipsis;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    .clear {
+      padding: 8px 0;
+      position: absolute;
+      top: 4px;
+      right: 20px;
+    }
+  }
+  .discussion {
+    list-style: none;
+    background: #e5e5e5;
+    margin: 0;
+    padding: 0 0 50px 0; // finality
+    max-height: 300px;
+    overflow: hidden;
+    li {
+      padding: 0.5rem;
+      overflow: hidden;
+      display: flex;
+    }
+    .avatar {
+      width: 40px; // stronger than %
+      min-width: 40px;
+      // could set height, but gonna bottom-align instead
+      position: relative; // for triangle
+      img {
+        display: block; // triangle position
+        width: 100%;
+      }
+    }
+
+    .other {
+      .avatar {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 0;
+          border: 5px solid white;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+
+    .self {
+      justify-content: flex-end;
+      align-items: flex-end;
+      .messages {
+        order: 1;
+        border-bottom-right-radius: 0; // weird shadow fix
+      }
+      .avatar {
+        order: 2;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 0;
+          border: 5px solid white;
+          border-right-color: transparent;
+          border-top-color: transparent;
+          box-shadow: 1px 1px 2px rgba(black, 0.2); // not quite perfect but close
+        }
+      }
+    }
+
+    .messages {
+      background: white;
+      padding: 10px;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px rgba(black, 0.2);
+      p {
+        font-size: 0.8rem;
+        margin: 0 0 0.2rem 0;
+      }
+      time {
+        font-size: 0.7rem;
+        color: #ccc;
+      }
+    }
+    &:hover {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+      }
+      &::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #7d7d7d;
+        border: 0px none #ffffff;
+        border-radius: 50px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #626262;
+      }
+      &::-webkit-scrollbar-thumb:active {
+        background: #555555;
+      }
+      &::-webkit-scrollbar-track {
+        background: #acacac;
+        border: 0px none #ffffff;
+        border-radius: 50px;
+      }
+      &::-webkit-scrollbar-track:hover {
+        background: #acacac;
+      }
+      &::-webkit-scrollbar-track:active {
+        background: #c3c3c3;
+      }
+      &::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+    }
+  }
+  .form {
+
+  }
+}

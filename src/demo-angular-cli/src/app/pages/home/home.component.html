@@ -1,0 +1,82 @@
+<p>
+  This demo is still a work in progress, try clicking and hovering buttons for examples.
+</p>
+
+<button mat-raised-button color="primary" [mdePopoverTriggerFor]="popover1">Hover Me</button>
+<button mat-raised-button color="accent" [mdePopoverTriggerFor]="popover2" mdePopoverTriggerOn="click">Click Me</button>
+<button mat-button color="primary" [mdePopoverTriggerFor]="popover3" mdePopoverTriggerOn="click" mdePopoverPositionX="before" [mdePopoverCloseOnClick]="false">Click Me</button>
+<button mat-button color="accent" [mdePopoverTriggerFor]="popover4" mdePopoverPositionX="before" [mdePopoverCloseOnClick]="false">Hover Me</button>
+
+
+<p>
+  Try keyboard interaction on the chat example, to focus the previous element press SHIFT + TAB, to focus the next element press TAB. You should see the Focus being trapped inside the chat window.
+</p>
+
+
+<ul>
+  <li>
+    <a href="" [routerLink]="['examples', 'form']">
+      Form
+    </a>
+  </li>
+</ul>
+
+
+<mde-popover #popover1="mdePopover" [mdePopoverLeaveDelay]="1000">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <p>
+        Click popover, I will close.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</mde-popover>
+
+<mde-popover #popover2="mdePopover">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <p>
+        Click popover, I will close.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</mde-popover>
+
+<mde-popover #popover3="mdePopover">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <p>
+        Click popover, I will stay open.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</mde-popover>
+
+
+<mde-popover #popover4="mdePopover" [mdePopoverLeaveDelay]="1000">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <p>
+        Click popover, I will stay open.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</mde-popover>
+
+
