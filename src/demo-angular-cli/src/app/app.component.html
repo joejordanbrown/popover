@@ -1,22 +1,22 @@
-<md-toolbar color="primary" #mainToolbar>
-  <button md-button [mdePopoverTriggerFor]="popover" mdePopoverTriggerOn="click">Click Me</button>
+<mat-toolbar color="primary" #mainToolbar>
+  <button mat-button [mdePopoverTriggerFor]="popover" mdePopoverTriggerOn="click">Click Me</button>
 
   <div class="fill"></div>
 
-  <button md-icon-button [mdePopoverTriggerFor]="themePopover" [mdePopoverTargetAt]="mainToolbar" mdePopoverTriggerOn="click">
-    <md-icon>format_color_fill</md-icon>
+  <button mat-icon-button [mdePopoverTriggerFor]="themePopover" [mdePopoverTargetAt]="mainToolbar" mdePopoverTriggerOn="click">
+    <mat-icon>format_color_fill</mat-icon>
   </button>
 
   <!--
-  <button md-icon-button [mdePopoverTriggerFor]="notificationsPopover" [mdePopoverTargetAt]="mainToolbar" mdePopoverTriggerOn="click">
-    <md-icon>notifications</md-icon>
+  <button mat-icon-button [mdePopoverTriggerFor]="notificationsPopover" [mdePopoverTargetAt]="mainToolbar" mdePopoverTriggerOn="click">
+    <mat-icon>notifications</mat-icon>
   </button>
   -->
 
-  <button md-icon-button [mdePopoverTriggerFor]="githubPopover" [mdePopoverTargetAt]="mainToolbar" mdePopoverTriggerOn="hover">
+  <button mat-icon-button [mdePopoverTriggerFor]="githubPopover" [mdePopoverTargetAt]="mainToolbar" mdePopoverTriggerOn="hover">
     <img src="../assets/images/github-circle-white-transparent.svg">
   </button>
-</md-toolbar>
+</mat-toolbar>
 
 
 <mde-popover #themePopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverCloseOnClick]="false" [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10" [mdePopoverArrowOffsetX]="58" mdePopoverArrowColor="#FFFFFF">
@@ -32,35 +32,35 @@
 </mde-popover>
 
 <mde-popover #popover="mdePopover">
-  <md-card class="example-card">
-    <md-card-content>
+  <mat-card class="example-card">
+    <mat-card-content>
       <p>
         The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
         A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
         bred for hunting.
       </p>
-    </md-card-content>
-    <md-card-actions>
-      <button md-button>LIKE</button>
-      <button md-button>SHARE</button>
-    </md-card-actions>
-  </md-card>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
 </mde-popover>
 
 
 
-<button class="support-button" md-fab
+<button class="support-button" mat-fab
         [mdePopoverTriggerFor]="supportPopover"
         mdePopoverArrowColor="#e5e5e5"
         mdePopoverTriggerOn="click"
         [mdePopoverCloseOnClick]="true">
-  <md-icon>chat</md-icon>
+  <mat-icon>chat</mat-icon>
 </button>
 
 
 <mde-popover #supportPopover="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="above"
              [mdePopoverArrowOffsetX]="28" [mdePopoverArrowWidth]="16"
-             [mdePopoverOverlapTrigger]="false" mdePopoverTriggerOn="click"
+             [mdePopoverOverlapTrigger]="false" [mdeFocusTrapEnabled]="true" mdePopoverTriggerOn="click"
              mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100">
   <app-support></app-support>
 </mde-popover>

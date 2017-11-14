@@ -161,12 +161,12 @@ You can use the `<mde-popover-target>` as the target reference.
 The popover uses `cdkTrapFocus` to trap focus within the popover, by default this is enabled.
 The popover can be be forced to not focus trap using `[mdeFocusTrapEnabled]="false"` attribute.
 ```html
-<mde-popover #appPopoverAccount="mdePopover">
+<mde-popover #appPopoverAccount="mdePopover" [mdeFocusTrapEnabled]="false">
   <button md-button> Profile </button>
   <button md-button> Logout </button>
 </mde-popover>
 
-<button md-button [mdePopoverTriggerFor]="appPopoverAccount" [mdeFocusTrapEnabled]="false">
+<button md-button [mdePopoverTriggerFor]="appPopoverAccount">
    <md-icon>face</md-icon>
 </button>
 ```

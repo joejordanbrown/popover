@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule, MatIconModule, MatInputModule, MatToolbarModule } from '@angular/material';
+import {
+  MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatTabsModule,
+  MatToolbarModule
+} from '@angular/material';
 
 // import { MdePopoverModule } from '../../../../dist/mde';
 // import { MdePopoverModule } from '../../../../dist';
@@ -22,8 +26,6 @@ import { ErrorModule } from './pages/error/error.module';
 
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +39,10 @@ import { ErrorModule } from './pages/error/error.module';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     MatToolbarModule,
+    MatTabsModule,
+    MatCardModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
