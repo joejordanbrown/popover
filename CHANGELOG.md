@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-alpha.7"></a>
+# [1.0.0-alpha.7](https://github.com/material-extended/mde/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2018-02-22)
+
+
+### Bug Fixes
+
+* **popover:** set _classList to public issue [#21](https://github.com/material-extended/mde/issues/21) ([2d07731](https://github.com/material-extended/mde/commit/2d07731))
+* **popover:** update to use panelClass ([204383e](https://github.com/material-extended/mde/commit/204383e))
+
+
+
 <a name="1.0.0-alpha.6"></a>
 # [1.0.0-alpha.6](https://github.com/material-extended/mde/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2017-11-13)
 
