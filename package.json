@@ -32,7 +32,7 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "clean": "rimraf out-tsc dist/*  \"src/lib/**/*.js\" \"src/lib/**/*.map\"",
+    "clean": "rimraf out-tsc dist/*  \"src/lib/**/*.js\" \"src/lib/**/*.map\" \"src/lib/**/*.css\"",
     "prebuild": "npm run clean",
     "build": "node build.js",
     "build-demo": "tsc -p src/demo/",
