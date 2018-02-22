@@ -54,7 +54,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy {
   private _focusTrapEnabled: boolean = true;
 
   /** Config object to be passed into the popover's ngClass */
-  private _classList: any = {};
+  _classList: {[key: string]: boolean} = {};
 
   // TODO: Write comment description
   /** */
