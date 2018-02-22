@@ -168,17 +168,27 @@ export class MdePopover implements MdePopoverPanel, OnDestroy {
    * @param classes list of class names
    */
   @Input('class')
-  get classList(): string { return this._classList; }
-  set classList(classes: string) {
+  set panelClass(classes: string) {
     if (classes && classes.length) {
       this._classList = classes.split(' ').reduce((obj: any, className: string) => {
         obj[className] = true;
         return obj;
       }, {});
+
       this._elementRef.nativeElement.className = '';
       this.setPositionClasses();
     }
   }
+
+  /**
+   * This method takes classes set on the host md-popover element and applies them on the
+   * popover template that displays in the overlay container.  Otherwise, it's difficult
+   * to style the containing popover from outside the component.
+   * @deprecated Use `panelClass` instead.
+   */
+  @Input()
+  get classList(): string { return this.panelClass; }
+  set classList(classes: string) { this.panelClass = classes; }
 
   /** Event emitted when the popover is closed. */
   @Output() close = new EventEmitter<void>();
