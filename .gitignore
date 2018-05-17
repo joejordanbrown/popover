@@ -1,34 +1,41 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-.DS_STORE
-dist/
-out-tsc/
-src/**/*.js
-src/**/*.css
-!src/demo/systemjs.config.js
-!src/demo/systemjs.config.lib.js
-!**/*systemjs-angular-loader.js
-*.js.map
-*.css.map
-e2e/**/*.js
-e2e/**/*.js.map
-coverage
+/dist
+/tmp
+/out-tsc
 
 # dependencies
-node_modules
+/node_modules
 
-# IDEs
+# IDEs and editors
 /.idea
-/.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # misc
-.DS_Store
 /.sass-cache
 /connect.lock
-/coverage/*
+/coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
--/.chrome
-# src/demo-angular-cli
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+

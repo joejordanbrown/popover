@@ -2,7 +2,7 @@ dist: trusty
 sudo: false
 language: node_js
 node_js:
-  - "6"
+  - "8"
 os:
   - linux
 before_install:
