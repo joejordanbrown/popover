@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/material-extended/mde/compare/v1.0.0-alpha.10...v2.0.0) (2018-05-18)
+
+
+
 <a name="1.0.0-alpha.10"></a>
 # [1.0.0-alpha.10](https://github.com/material-extended/mde/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2018-02-22)
 
