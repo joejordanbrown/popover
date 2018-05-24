@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/material-extended/mde/compare/v2.0.0...v2.0.1) (2018-05-24)
+
+
+### Bug Fixes
+
+* **library:** add missing peer dependency [@angular](https://github.com/angular)/animations ([78ab045](https://github.com/material-extended/mde/commit/78ab045))
+* **popover:** event undefined with _handleMousedown [#26](https://github.com/material-extended/mde/issues/26) ([9eb7391](https://github.com/material-extended/mde/commit/9eb7391))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/material-extended/mde/compare/v1.0.0-alpha.10...v2.0.0) (2018-05-18)
 
