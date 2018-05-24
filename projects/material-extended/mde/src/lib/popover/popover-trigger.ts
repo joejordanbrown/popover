@@ -498,7 +498,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     }
 
     @HostListener('mousedown') _handleMousedown(event: MouseEvent): void {
-        if (!isFakeMousedownFromScreenReader(event)) {
+        if (event && !isFakeMousedownFromScreenReader(event)) {
             this._openedByMouse = true;
         }
     }
