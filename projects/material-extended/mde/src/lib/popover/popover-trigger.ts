@@ -185,7 +185,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     /** Whether the popover is open. */
     get popoverOpen(): boolean { return this._popoverOpen; }
 
-    @HostListener('click') onClick() {
+    @HostListener('click', ['$event']) onClick(event: MouseEvent): void {
       if (this.popover.triggerEvent === 'click') {
           // this.popover.setCurrentStyles();
           // this._setCurrentConfig();
@@ -193,7 +193,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
       }
     }
 
-    @HostListener('mouseenter') onMouseEnter() {
+    @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent): void {
       this._halt = false;
       if (this.popover.triggerEvent === 'hover') {
           this._mouseoverTimer = setTimeout(() => {
@@ -202,7 +202,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
       }
     }
 
-    @HostListener('mouseleave') onMouseLeave() {
+    @HostListener('mouseleave', ['$event']) onMouseLeave(event: MouseEvent): void {
       if (this.popover.triggerEvent === 'hover') {
         if (this._mouseoverTimer) {
             clearTimeout(this._mouseoverTimer);
@@ -497,7 +497,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         }
     }
 
-    @HostListener('mousedown') _handleMousedown(event: MouseEvent): void {
+    @HostListener('mousedown', ['$event']) _handleMousedown(event: MouseEvent): void {
         if (event && !isFakeMousedownFromScreenReader(event)) {
             this._openedByMouse = true;
         }
