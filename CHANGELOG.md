@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/material-extended/mde/compare/v2.0.1...v2.0.2) (2018-08-15)
+
+
+### Bug Fixes
+
+* **MdePopoverTrigger:** fix compile errors in 'fullTemplateTypeCheck' mode, closes [#25](https://github.com/material-extended/mde/issues/25) ([1fdf413](https://github.com/material-extended/mde/commit/1fdf413))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/material-extended/mde/compare/v2.0.0...v2.0.1) (2018-05-24)
 
