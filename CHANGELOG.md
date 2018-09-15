@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.3"></a>
+## [2.0.3](https://github.com/material-extended/mde/compare/v1.0.0-alpha.10...v2.0.3) (2018-09-15)
+
+
+### Bug Fixes
+
+* **library:** add missing peer dependency [@angular](https://github.com/angular)/animations ([78ab045](https://github.com/material-extended/mde/commit/78ab045))
+* **MdePopoverTrigger:** fix compile errors in 'fullTemplateTypeCheck' mode, closes [#25](https://github.com/material-extended/mde/issues/25) ([1fdf413](https://github.com/material-extended/mde/commit/1fdf413))
+* **MdePopoverTrigger:** remove mouseoverTimer on destroyPopover, closes [#34](https://github.com/material-extended/mde/issues/34) ([674b4e2](https://github.com/material-extended/mde/commit/674b4e2))
+* **popover:** event undefined with _handleMousedown [#26](https://github.com/material-extended/mde/issues/26) ([9eb7391](https://github.com/material-extended/mde/commit/9eb7391))
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/material-extended/mde/compare/v2.0.1...v2.0.2) (2018-08-15)
 
