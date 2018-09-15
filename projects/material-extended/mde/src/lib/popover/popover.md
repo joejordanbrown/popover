@@ -225,24 +225,25 @@ This directive is intended to be used in conjunction with an mde-popover tag. It
 ##### Selector: `[mdePopoverTriggerFor]`
 ##### Exported as: `mdePopoverTrigger`
 
-| Name                                              | Description                                                                             |
-|---------------------------------------------------|-----------------------------------------------------------------------------------------|
-| @Input('mdePopoverTriggerFor') popover            | References the popover instance that the trigger is associated with.                    |
-| @Input('mdePopoverTargetAt') targetElement        | References the popover target instance that the popover positioning is associated with. |
-| @Input('mdePopoverPositionX') positionX           | Position of the popover in the X axis.                                                  |
-| @Input('mdePopoverPositionY') positionY           | Position of the popover in the Y axis.                                                  |
-| @Input('mdePopoverTriggerOn') triggerEvent        | Event for triggering popover click, hover and none. Default: click                      |
-| @Input('mdePopoverEnterDelay') enterDelay         | Delay for popover before enters                                                         |
-| @Input('mdePopoverLeaveDelay') leaveDelay         | Delay for popover before leaves                                                         |
-| @Input('mdePopoverOverlapTrigger') overlapTrigger | Whether the popover should overlap its trigger.                                         |
-| @Input('mdePopoverOffsetX') targetOffsetX         | Offset position of the popover from target in the X axis.                               |
-| @Input('mdePopoverOffsetY') targetOffsetY         | Offset position of the popover from target in the Y axis.                               |
-| @Input('mdePopoverArrowOffsetX') arrowOffsetX     | Offset position of the popover arrow from the X axis.                                   |
-| @Input('mdePopoverArrowWidth') arrowWidth         | Arrow width in pixels.                                                                  |
-| @Input('mdePopoverArrowColor') arrowColor         | Arrow color, accepts CSS color values. Default: rgba(0, 0, 0, 0.12)                     |
-| @Input('mdePopoverCloseOnClick') closeOnClick     | Whether the popover should close on click.                                              |
-| @Output() opened                                  | Event emitted when the associated popover is opened.                                    |
-| @Output() closed                                  | Event emitted when the associated popover is closed.                                    |
+| Name                                                          | Description                                                                             |
+|---------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| @Input('mdePopoverTriggerFor') popover                        | References the popover instance that the trigger is associated with.                    |
+| @Input('mdePopoverTargetAt') targetElement                    | References the popover target instance that the popover positioning is associated with. |
+| @Input('mdePopoverPositionX') positionX                       | Position of the popover in the X axis.                                                  |
+| @Input('mdePopoverPositionY') positionY                       | Position of the popover in the Y axis.                                                  |
+| @Input('mdePopoverTriggerOn') triggerEvent                    | Event for triggering popover click, hover and none. Default: click                      |
+| @Input('mdePopoverEnterDelay') enterDelay                     | Delay for popover before enters                                                         |
+| @Input('mdePopoverLeaveDelay') leaveDelay                     | Delay for popover before leaves                                                         |
+| @Input('mdePopoverOverlapTrigger') overlapTrigger             | Whether the popover should overlap its trigger.                                         |
+| @Input('mdePopoverOffsetX') targetOffsetX                     | Offset position of the popover from target in the X axis.                               |
+| @Input('mdePopoverOffsetY') targetOffsetY                     | Offset position of the popover from target in the Y axis.                               |
+| @Input('mdePopoverArrowOffsetX') arrowOffsetX                 | Offset position of the popover arrow from the X axis.                                   |
+| @Input('mdePopoverArrowWidth') arrowWidth                     | Arrow width in pixels.                                                                  |
+| @Input('mdePopoverArrowColor') arrowColor                     | Arrow color, accepts CSS color values. Default: rgba(0, 0, 0, 0.12)                     |
+| @Input('mdePopoverCloseOnClick') closeOnClick                 | Whether the popover should close on click.                                              |
+| @Input('mdePopoverBackdropCloseOnClick') backdropCloseOnClick | Whether the popover should close on backdrop click.                                     |
+| @Output() opened                                              | Event emitted when the associated popover is opened.                                    |
+| @Output() closed                                              | Event emitted when the associated popover is closed.                                    |
 
 ##### Methods
 `togglePopover`
