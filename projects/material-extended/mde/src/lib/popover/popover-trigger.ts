@@ -108,7 +108,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     @Input('mdePopoverCloseOnClick') closeOnClick: boolean;
 
 
-    /** Popover container close on click */
+    /** Popover backdrop close on click */
     @Input('mdePopoverBackdropCloseOnClick') backdropCloseOnClick = true;
 
     /** Event emitted when the associated popover is opened. */
