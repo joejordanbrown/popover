@@ -255,6 +255,10 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
     /** Removes the popover from the DOM. */
     destroyPopover(): void {
+        if (this._mouseoverTimer) {
+            clearTimeout(this._mouseoverTimer);
+            this._mouseoverTimer = null;
+        }
         if (this._overlayRef) {
           this._overlayRef.dispose();
           this._overlayRef = null;
