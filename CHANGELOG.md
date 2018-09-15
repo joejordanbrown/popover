@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/material-extended/mde/compare/v2.0.3...v2.1.0) (2018-09-15)
+
+
+### Features
+
+* **demo:** add mdePopoverBackdropCloseOnClick option ([eb4a881](https://github.com/material-extended/mde/commit/eb4a881))
+* **MdePopoverTrigger:** add mdePopoverBackdropCloseOnClick option, closes [#36](https://github.com/material-extended/mde/issues/36) ([9164650](https://github.com/material-extended/mde/commit/9164650))
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/material-extended/mde/compare/v1.0.0-alpha.10...v2.0.3) (2018-09-15)
 
