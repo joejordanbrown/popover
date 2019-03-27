@@ -10,6 +10,7 @@ import {
   ElementRef,
   ChangeDetectionStrategy,
   HostBinding,
+  NgZone
 } from '@angular/core';
 
 import { ESCAPE } from '@angular/cdk/keycodes';
@@ -195,7 +196,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
 
   @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
 
-  constructor(private _elementRef: ElementRef) {
+  constructor(private _elementRef: ElementRef, public zone: NgZone) {
     this.setPositionClasses();
   }
 

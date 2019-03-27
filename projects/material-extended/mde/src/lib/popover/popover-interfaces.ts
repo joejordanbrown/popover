@@ -1,4 +1,4 @@
-import { ElementRef, EventEmitter, TemplateRef } from '@angular/core';
+import { ElementRef, EventEmitter, NgZone, TemplateRef } from '@angular/core';
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
 
 export interface MdePopoverPanel {
@@ -19,6 +19,7 @@ export interface MdePopoverPanel {
     setCurrentStyles: () => void;
     templateRef: TemplateRef<any>;
     close: EventEmitter<void>;
+    zone: NgZone;
     setPositionClasses: (x: MdePopoverPositionX, y: MdePopoverPositionY) => void;
     _emitCloseEvent: () => void;
 }
