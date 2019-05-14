@@ -46,6 +46,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   private _enterDelay = 200;
   private _leaveDelay = 200;
   private _overlapTrigger = true;
+  private _disableAnimation = false;
   private _targetOffsetX = 0;
   private _targetOffsetY = 0;
   private _arrowOffsetX = 20;
@@ -152,6 +153,13 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   get closeOnClick(): boolean { return this._closeOnClick; }
   set closeOnClick(v: boolean) { this._closeOnClick = v; }
 
+  /**
+   * Disable animations of popover and all child elements
+   * default: false
+   */
+  @Input('mdePopoverDisableAnimation')
+  get disableAnimation(): boolean { return this._disableAnimation; }
+  set disableAnimation(v: boolean) { this._disableAnimation = v; }
 
   /**
    * Popover focus trap using cdkTrapFocus
