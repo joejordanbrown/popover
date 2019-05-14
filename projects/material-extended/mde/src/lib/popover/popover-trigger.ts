@@ -380,11 +380,13 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
                 posisionY = posisionY === 'below' ? 'above' : 'below';
             }
 
-            this.popover.positionX = posisionX;
-            this.popover.positionY = posisionY;
-            this.popover.setCurrentStyles();
+            this.popover.zone.run(() => {
+                this.popover.positionX = posisionX;
+                this.popover.positionY = posisionY;
+                this.popover.setCurrentStyles();
 
-            this.popover.setPositionClasses(posisionX, posisionY);
+                this.popover.setPositionClasses(posisionX, posisionY);
+            });
         });
     }
 
