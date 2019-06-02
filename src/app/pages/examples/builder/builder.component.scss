@@ -1,0 +1,71 @@
+.example-h2 {
+    margin: 10px;
+}
+  
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.example-margin {
+    margin: 10px;
+}
+
+.mat-slider-horizontal {
+    width: 300px;
+}
+
+.mat-slider-vertical {
+    height: 300px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+mat-card-title {
+    position: relative;
+}
+
+::ng-deep mat-button-toggle { 
+    &.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+        line-height: 40px;
+    }
+}
+
+.align-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.align-it {
+    transition: all 1s ease;
+}
+
+.align-left {
+    // text-align: left;
+    transition: all 1s ease;
+    position: relative;
+    left: 0;
+    transform: translateX(0%);
+
+}
+
+.align-center {
+    // text-align: center;
+    transition: all 1s ease;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.align-right {
+    // text-align: right;
+    transition: all 1s ease;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+}

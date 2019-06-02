@@ -1,0 +1,111 @@
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Slider configuration</h2>
+
+    <section class="example-section">
+  
+      <mat-form-field class="full-width">
+        <mat-label>@Input('mdePopoverTriggerOn') triggerEvent</mat-label>
+        <mat-select [(ngModel)]="event" (selectionChange)="popoverTrigger.reset()">
+          <mat-option value="click">Click</mat-option>
+          <mat-option value="hover">Hover</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </section>
+
+    <section class="example-section">
+  
+      <mat-form-field class="full-width">
+        <mat-label>@Input('mdePopoverPositionX') positionX</mat-label>
+        <mat-select [(ngModel)]="popoverPositionX" (selectionChange)="popoverTrigger.reset()">
+          <mat-option value="before">before</mat-option>
+          <mat-option value="after">after</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </section>
+
+    <section class="example-section">
+
+      <mat-form-field  class="full-width">
+        <mat-label>@Input('mdePopoverPositionY') positionY</mat-label>
+        <mat-select [(ngModel)]="popoverPositionY" (selectionChange)="popoverTrigger.reset()">
+          <mat-option value="above">above</mat-option>
+          <mat-option value="below">below</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+        <mat-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
+          Open
+        </mat-checkbox>
+        <mat-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
+          <input matInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
+        </mat-form-field>
+      </section>
+  
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
+        Auto ticks
+      </mat-checkbox>
+      <mat-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
+        <input matInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
+      </mat-form-field>
+    </section>
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="vertical">Vertical</mat-checkbox>
+      <mat-checkbox class="example-margin" [(ngModel)]="invert">Inverted</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+    </section>
+
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="result">
+  <mat-card-content>
+    <mat-card-title>
+      <h2 class="example-h2">Result</h2>
+
+      <mat-button-toggle-group class="align-content" name="fontStyle" aria-label="Align Style" #group="matButtonToggleGroup" [(ngModel)]="alignButton">
+        <mat-button-toggle value="align-left" selected>Left</mat-button-toggle>
+        <mat-button-toggle value="align-center">Center</mat-button-toggle>
+        <mat-button-toggle value="align-right">Right</mat-button-toggle>
+      </mat-button-toggle-group>
+      <button (click)="popoverTrigger.reset()">RESET</button>
+    </mat-card-title>
+
+    <div class="">
+      <button class="align-it" [ngClass]="alignButton" mat-raised-button color="primary" [mdePopoverTriggerFor]="popover0" #popoverTrigger="mdePopoverTrigger">Hover Me</button>
+    </div>
+
+  </mat-card-content>
+</mat-card>
+
+
+<mde-popover #popover0="mdePopover" [mdePopoverPositionX]="popoverPositionX" [mdePopoverPositionY]="popoverPositionY" [mdePopoverLeaveDelay]="1000" [mdePopoverTriggerOn]="event">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <p>
+        Click popover, I will close.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</mde-popover>
