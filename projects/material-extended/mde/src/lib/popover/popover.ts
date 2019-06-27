@@ -13,16 +13,15 @@ import {
   NgZone
 } from '@angular/core';
 
+import { AnimationEvent } from '@angular/animations';
+
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { ESCAPE } from '@angular/cdk/keycodes';
 
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
 import { throwMdePopoverInvalidPositionX, throwMdePopoverInvalidPositionY } from './popover-errors';
 import { MdePopoverPanel } from './popover-interfaces';
 import { transformPopover } from './popover-animations';
-
-import { AnimationEvent } from '@angular/animations';
-
-
 
 @Component({
   selector: 'mde-popover',
@@ -104,47 +103,47 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   /** Popover trigger event */
   @Input('mdePopoverTriggerOn')
   get triggerEvent(): MdePopoverTriggerEvent { return this._triggerEvent; }
-  set triggerEvent(v: MdePopoverTriggerEvent) { this._triggerEvent = v; }
+  set triggerEvent(value: MdePopoverTriggerEvent) { this._triggerEvent = value; }
 
   /** Popover enter delay */
   @Input('mdePopoverEnterDelay')
   get enterDelay(): number { return this._enterDelay; }
-  set enterDelay(v: number) { this._enterDelay = v; }
+  set enterDelay(value: number) { this._enterDelay = value; }
 
   /** Popover leave delay */
   @Input('mdePopoverLeaveDelay')
   get leaveDelay(): number { return this._leaveDelay; }
-  set leaveDelay(v: number) { this._leaveDelay = v; }
+  set leaveDelay(value: number) { this._leaveDelay = value; }
 
   /** Popover overlap trigger */
   @Input('mdePopoverOverlapTrigger')
   get overlapTrigger(): boolean { return this._overlapTrigger; }
-  set overlapTrigger(v: boolean) { this._overlapTrigger = v; }
+  set overlapTrigger(value: boolean) { this._overlapTrigger = value; }
 
   /** Popover target offset x */
   @Input('mdePopoverOffsetX')
   get targetOffsetX(): number { return this._targetOffsetX; }
-  set targetOffsetX(v: number) { this._targetOffsetX = v; }
+  set targetOffsetX(value: number) { this._targetOffsetX = value; }
 
   /** Popover target offset y */
   @Input('mdePopoverOffsetY')
   get targetOffsetY(): number { return this._targetOffsetY; }
-  set targetOffsetY(v: number) { this._targetOffsetY = v; }
+  set targetOffsetY(value: number) { this._targetOffsetY = value; }
 
   /** Popover arrow offset x */
   @Input('mdePopoverArrowOffsetX')
   get arrowOffsetX(): number { return this._arrowOffsetX; }
-  set arrowOffsetX(v: number) { this._arrowOffsetX = v; }
+  set arrowOffsetX(value: number) { this._arrowOffsetX = value; }
 
   /** Popover arrow width */
   @Input('mdePopoverArrowWidth')
   get arrowWidth(): number { return this._arrowWidth; }
-  set arrowWidth(v: number) { this._arrowWidth = v; }
+  set arrowWidth(value: number) { this._arrowWidth = value; }
 
   /** Popover arrow color */
   @Input('mdePopoverArrowColor')
   get arrowColor(): string { return this._arrowColor; }
-  set arrowColor(v: string) { this._arrowColor = v; }
+  set arrowColor(value: string) { this._arrowColor = value; }
 
   /**
    * Popover container close on click
@@ -152,7 +151,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
    */
   @Input('mdePopoverCloseOnClick')
   get closeOnClick(): boolean { return this._closeOnClick; }
-  set closeOnClick(v: boolean) { this._closeOnClick = v; }
+  set closeOnClick(value: boolean) { this._closeOnClick = coerceBooleanProperty(value); }
 
   /**
    * Disable animations of popover and all child elements
@@ -160,7 +159,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
    */
   @Input('mdePopoverDisableAnimation')
   get disableAnimation(): boolean { return this._disableAnimation; }
-  set disableAnimation(v: boolean) { this._disableAnimation = v; }
+  set disableAnimation(value: boolean) { this._disableAnimation = coerceBooleanProperty(value); }
 
   /**
    * Popover focus trap using cdkTrapFocus
@@ -168,7 +167,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
    */
   @Input('mdeFocusTrapEnabled')
   get focusTrapEnabled(): boolean { return this._focusTrapEnabled; }
-  set focusTrapEnabled(v: boolean) { this._focusTrapEnabled = v; }
+  set focusTrapEnabled(value: boolean) { this._focusTrapEnabled = coerceBooleanProperty(value); }
 
   /**
    * Popover focus trap auto capture using cdkTrapFocusAutoCapture
@@ -176,7 +175,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
    */
   @Input('mdeFocusTrapAutoCaptureEnabled')
   get focusTrapAutoCaptureEnabled(): boolean { return this._focusTrapAutoCaptureEnabled; }
-  set focusTrapAutoCaptureEnabled(v: boolean) { this._focusTrapAutoCaptureEnabled = v; }
+  set focusTrapAutoCaptureEnabled(value: boolean) { this._focusTrapAutoCaptureEnabled = coerceBooleanProperty(value); }
 
   /**
    * This method takes classes set on the host md-popover element and applies them on the

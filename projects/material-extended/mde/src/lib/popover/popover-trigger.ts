@@ -12,11 +12,9 @@ import {
   HostBinding,
 } from '@angular/core';
 
-
 import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
 import { Direction, Directionality } from '@angular/cdk/bidi';
 import {
-  ConnectedPositionStrategy,
   Overlay,
   OverlayRef,
   OverlayConfig,
@@ -27,8 +25,6 @@ import {
 import { TemplatePortal } from '@angular/cdk/portal';
 
 import { Subscription } from 'rxjs';
-
-import { first } from 'rxjs/operators';
 
 import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
