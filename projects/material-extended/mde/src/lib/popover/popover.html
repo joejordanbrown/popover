@@ -4,7 +4,7 @@
        (click)="onClick()" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" [@.disabled]="disableAnimation"
        [@transformPopover]="'enter'">
     <div class="mde-popover-direction-arrow" [ngStyle]="popoverArrowStyles" *ngIf="!overlapTrigger"></div>
-    <div class="mde-popover-content" [ngStyle]="popoverContentStyles" cdkTrapFocus="focusTrapEnabled" cdkTrapFocusAutoCapture="true">
+    <div class="mde-popover-content" [ngStyle]="popoverContentStyles" [cdkTrapFocus]="focusTrapEnabled" cdkTrapFocusAutoCapture="true">
       <ng-content></ng-content>
     </div>
   </div>
