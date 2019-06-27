@@ -6,11 +6,13 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { MdePopover } from './popover';
 import { MdePopoverTrigger } from './popover-trigger';
 import { MdePopoverTarget } from './popover-target';
+import { A11yModule } from '@angular/cdk/a11y';
 
 @NgModule({
   imports: [
     OverlayModule,
-    CommonModule
+    CommonModule,
+    A11yModule
   ],
   exports: [MdePopover, MdePopoverTrigger, MdePopoverTarget],
   declarations: [MdePopover, MdePopoverTrigger, MdePopoverTarget],
