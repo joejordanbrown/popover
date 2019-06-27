@@ -54,6 +54,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   private _arrowColor = 'rgba(0, 0, 0, 0.12)';
   private _closeOnClick = true;
   private _focusTrapEnabled = true;
+  private _focusTrapAutoCaptureEnabled = true;
 
   /** Config object to be passed into the popover's ngClass */
   _classList: {[key: string]: boolean} = {};
@@ -169,6 +170,13 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   get focusTrapEnabled(): boolean { return this._focusTrapEnabled; }
   set focusTrapEnabled(v: boolean) { this._focusTrapEnabled = v; }
 
+  /**
+   * Popover focus trap auto capture using cdkTrapFocusAutoCapture
+   * default: true
+   */
+  @Input('mdeFocusTrapAutoCaptureEnabled')
+  get focusTrapAutoCaptureEnabled(): boolean { return this._focusTrapAutoCaptureEnabled; }
+  set focusTrapAutoCaptureEnabled(v: boolean) { this._focusTrapAutoCaptureEnabled = v; }
 
   /**
    * This method takes classes set on the host md-popover element and applies them on the
