@@ -6,6 +6,7 @@
        (click)="theme=item.className"
        [class.hover]="hovering!==null"
        (focus)="hovering=item.className"
+       [attr.cdkFocusInitial]="theme===item.className || null"
        (mouseenter)="hovering=item.className"
        (mouseleave)="hovering=null">
     <mat-icon *ngIf="theme===item.className">check_circle</mat-icon>
