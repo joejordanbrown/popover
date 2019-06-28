@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/material-extended/mde/compare/v2.2.2...v2.3.0) (2019-06-28)
+
+
+### Bug Fixes
+
+* **demo:** fix theme issue ([0834817](https://github.com/material-extended/mde/commit/0834817))
+* **popover:** fix CdkTrapFocus issue [#48](https://github.com/material-extended/mde/issues/48) ([#52](https://github.com/material-extended/mde/issues/52)) ([03cd7f1](https://github.com/material-extended/mde/commit/03cd7f1))
+
+
+### Features
+
+* **demo:** add cdkFocusInitial ([5b530fd](https://github.com/material-extended/mde/commit/5b530fd))
+* **popover:** add mdeFocusTrapAutoCaptureEnabled option ([4802a96](https://github.com/material-extended/mde/commit/4802a96))
+
+
+
 ### [2.2.2](https://github.com/material-extended/mde/compare/v2.2.0...v2.2.2) (2019-06-02)
 
 
