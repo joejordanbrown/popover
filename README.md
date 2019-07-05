@@ -54,7 +54,12 @@ Install required packages @angular/cdk
 or
 `npm install @angular/cdk`
 
-Remember to import Material2 theme.
+### Initial setup
+The CDK overlays depend on a small set of structural styles to work correctly. If you're using Angular Material, these styles have been included together with the theme, otherwise if you're using the CDK on its own, you'll have to include the styles yourself. You can do so by importing the prebuilt styles in your global stylesheet:
+
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+### Import module
 
 app.module.ts
 ```typescript
