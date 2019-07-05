@@ -24,7 +24,7 @@ If you'd like to contribute please create an issue or pull request.
 
 **Material theme picker**
 
-![image](https://media.giphy.com/media/jsxheZJXN1346GD5St/giphy.gif)
+[![Material theme picker](https://media.giphy.com/media/jsxheZJXN1346GD5St/giphy.gif)](https://stackblitz.com/edit/angular-popover-demo)
 
 **Standard popover**
 
