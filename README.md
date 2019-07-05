@@ -22,6 +22,10 @@ If you'd like to contribute please create an issue or pull request.
 
 ### Examples
 
+**Material theme picker**
+
+![image](https://media.giphy.com/media/jsxheZJXN1346GD5St/giphy.gif)
+
 **Standard popover**
 
 ![image](https://cloud.githubusercontent.com/assets/10200431/22394189/02e9b21e-e511-11e6-9f91-c6b470a6b212.png)
