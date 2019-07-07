@@ -1,7 +1,7 @@
 # Material Extended for Angular - Popover
 
 [![npm version](https://badge.fury.io/js/%40material-extended%2Fmde.svg)](https://www.npmjs.com/package/%40material-extended%2Fmde)
-[![Build Status](https://travis-ci.org/material-extended/mde.svg?branch=master)](https://travis-ci.org/material-extended/mde)
+[![Build Status](https://travis-ci.org/material-extended/popover.svg?branch=master)](https://travis-ci.org/material-extended/popover)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Join the chat at https://gitter.im/material-extended/mde](https://badges.gitter.im/material-extended/mde.svg)](https://gitter.im/material-extended/mde?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
