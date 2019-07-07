@@ -22,6 +22,10 @@ If you'd like to contribute please create an issue or pull request.
 
 ### Examples
 
+**Material theme picker**
+
+[![Material theme picker](https://media.giphy.com/media/jsxheZJXN1346GD5St/giphy.gif)](https://stackblitz.com/edit/angular-popover-demo)
+
 **Standard popover**
 
 ![image](https://cloud.githubusercontent.com/assets/10200431/22394189/02e9b21e-e511-11e6-9f91-c6b470a6b212.png)
@@ -50,7 +54,12 @@ Install required packages @angular/cdk
 or
 `npm install @angular/cdk`
 
-Remember to import Material2 theme.
+### Initial setup
+The CDK overlays depend on a small set of structural styles to work correctly. If you're using Angular Material, these styles have been included together with the theme, otherwise if you're using the CDK on its own, you'll have to include the styles yourself. You can do so by importing the prebuilt styles in your global stylesheet:
+
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+### Import module
 
 app.module.ts
 ```typescript
