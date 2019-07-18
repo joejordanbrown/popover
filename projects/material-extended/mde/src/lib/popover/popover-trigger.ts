@@ -197,7 +197,6 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent): void {
       this._halt = false;
       if (this.popover.triggerEvent === 'hover') {
-        this._changeDetectorRef.markForCheck();
           this._mouseoverTimer = setTimeout(() => {
               this.openPopover();
           }, this.popover.enterDelay);
