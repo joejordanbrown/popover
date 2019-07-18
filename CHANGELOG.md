@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.1](https://github.com/material-extended/mde/compare/v2.3.0...v2.3.1) (2019-07-18)
+
+
+### Bug Fixes
+
+* **popover:** add markForCheck for onpush strategy fixes [#57](https://github.com/material-extended/mde/issues/57) ([3af3b62](https://github.com/material-extended/mde/commit/3af3b62))
+
+
+
 ## [2.3.0](https://github.com/material-extended/mde/compare/v2.2.2...v2.3.0) (2019-06-28)
 
 
