@@ -10,6 +10,7 @@ import {
   ViewContainerRef,
   HostListener,
   HostBinding,
+  ChangeDetectorRef,
 } from '@angular/core';
 
 import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
@@ -116,7 +117,8 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
     constructor(private _overlay: Overlay, public _elementRef: ElementRef,
               private _viewContainerRef: ViewContainerRef,
-              @Optional() private _dir: Directionality) { }
+              @Optional() private _dir: Directionality,
+              private _changeDetectorRef: ChangeDetectorRef) { }
 
     ngAfterViewInit() {
         this._checkPopover();
@@ -195,6 +197,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent): void {
       this._halt = false;
       if (this.popover.triggerEvent === 'hover') {
+        this._changeDetectorRef.markForCheck();
           this._mouseoverTimer = setTimeout(() => {
               this.openPopover();
           }, this.popover.enterDelay);
@@ -375,6 +378,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
             if (!this.popover.overlapTrigger) {
                 posisionY = posisionY === 'below' ? 'above' : 'below';
             }
+
+            // required for ChangeDetectionStrategy.OnPush
+            this._changeDetectorRef.markForCheck();
 
             this.popover.zone.run(() => {
                 this.popover.positionX = posisionX;
