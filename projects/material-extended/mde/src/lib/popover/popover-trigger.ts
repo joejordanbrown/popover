@@ -11,6 +11,7 @@ import {
   HostListener,
   HostBinding,
   ChangeDetectorRef,
+  Renderer2,
 } from '@angular/core';
 
 import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
@@ -21,7 +22,8 @@ import {
   OverlayConfig,
   HorizontalConnectionPos,
   VerticalConnectionPos,
-  FlexibleConnectedPositionStrategy
+  FlexibleConnectedPositionStrategy,
+  OverlayContainer
 } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 
@@ -108,6 +110,8 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     /** Popover backdrop close on click */
     @Input('mdePopoverBackdropCloseOnClick') backdropCloseOnClick = true;
 
+    @Input('mdePopoverBackdropShadow') backdropShadow = false;
+
     /** Event emitted when the associated popover is opened. */
     @Output() opened = new EventEmitter<void>();
 
@@ -118,7 +122,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     constructor(private _overlay: Overlay, public _elementRef: ElementRef,
               private _viewContainerRef: ViewContainerRef,
               @Optional() private _dir: Directionality,
-              private _changeDetectorRef: ChangeDetectorRef) { }
+              private _changeDetectorRef: ChangeDetectorRef,
+              private _renderer: Renderer2,
+              private _overlayContainer: OverlayContainer) { }
 
     ngAfterViewInit() {
         this._checkPopover();
@@ -236,6 +242,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
               this._subscribeToBackdrop();
             }
 
+            /** Only subscribe to shadow backdrop if "mdePopoverBackdropShadow" option enabled */
+            if(this.backdropShadow) this._createShadow();
+            
             this._initPopover();
         }
     }
@@ -249,7 +258,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
           if (this.triggerEvent === 'click' && this.backdropCloseOnClick === true) {
             this._backdropSubscription.unsubscribe();
           }
-
+          this._destroyShadow();
           this._resetPopover();
         }
     }
@@ -505,6 +514,27 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         if (this._positionSubscription) {
             this._positionSubscription.unsubscribe();
         }
+    }
+
+     /**
+    * This method ensures that the popover always comes with the
+    * backdrop dark shadow once "mdePopoverBackdropShadow" is 
+    * enabled.
+    */
+    private _createShadow(): void{
+        this._renderer.setStyle(this._overlayContainer.getContainerElement(),
+          'background', `radial-gradient(
+                circle at ${this._elementRef.nativeElement.getBoundingClientRect().x}px ${this._elementRef.nativeElement.getBoundingClientRect().y}px, 
+                transparent, black)`
+        );
+    }
+
+    /**
+    * This method ensures that the popover shadow is always
+    * destroyed once the popover is closed.
+    */
+    private _destroyShadow(): void {
+      this._renderer.setStyle(this._overlayContainer.getContainerElement(),'background', ``);
     }
 
     @HostListener('mousedown', ['$event']) _handleMousedown(event: MouseEvent): void {

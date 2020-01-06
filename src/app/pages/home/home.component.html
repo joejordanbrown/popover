@@ -6,7 +6,7 @@
 <button mat-raised-button color="accent" [mdePopoverTriggerFor]="popover2" mdePopoverTriggerOn="click" [mdePopoverBackdropCloseOnClick]="false">Click Me</button>
 <button mat-button color="primary" [mdePopoverTriggerFor]="popover3" mdePopoverTriggerOn="click" mdePopoverPositionX="before" [mdePopoverCloseOnClick]="false">Click Me</button>
 <button mat-button color="accent" [mdePopoverTriggerFor]="popover4" mdePopoverPositionX="before" [mdePopoverCloseOnClick]="false">Hover Me</button>
-
+<button mat-button color="primary" [mdePopoverTriggerFor]="popover5" mdePopoverTriggerOn="click" [mdePopoverBackdropShadow]="true" [mdePopoverOverlapTrigger]="false">Click Me</button>
 
 <p>
   Try keyboard interaction on the chat example, to focus the previous element press SHIFT + TAB, to focus the next element press TAB. You should see the Focus being trapped inside the chat window.
@@ -70,6 +70,20 @@
     <mat-card-content>
       <p>
         Click popover, I will stay open.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</mde-popover>
+
+<mde-popover #popover5="mdePopover" [mdePopoverDisableAnimation]="true" [mdePopoverLeaveDelay]="1000">
+  <mat-card class="example-card">
+    <mat-card-content>
+      <p>
+        Click popover, I will stay open with a dark background shadow.
       </p>
     </mat-card-content>
     <mat-card-actions>
