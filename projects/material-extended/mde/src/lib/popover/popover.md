@@ -243,6 +243,7 @@ This directive is intended to be used in conjunction with an mde-popover tag. It
 | @Input('mdePopoverArrowColor') arrowColor                     | Arrow color, accepts CSS color values. Default: rgba(0, 0, 0, 0.12)                     |
 | @Input('mdePopoverCloseOnClick') closeOnClick                 | Whether the popover should close on click.                                              |
 | @Input('mdePopoverBackdropCloseOnClick') backdropCloseOnClick | Whether the popover should close on backdrop click.                                     |
+| @Input('mdePopoverBackdropShadow') backdropShadow             | Whether the popover should have a dark backdrop. Default false.                      |
 | @Output() opened                                              | Event emitted when the associated popover is opened.                                    |
 | @Output() closed                                              | Event emitted when the associated popover is closed.                                    |
 
