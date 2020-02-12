@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'examples',
-    loadChildren: './pages/examples/examples.module#ExamplesModule'
+    loadChildren: () => import('./pages/examples/examples.module').then(m => m.ExamplesModule)
   },
   {
     path: '**',
