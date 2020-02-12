@@ -142,9 +142,8 @@
           },
           "configurations": {
             "production": {
-              "project": "projects/material-extended/mde/ng-package.prod.json"
-            ,              "tsConfig": "projects/material-extended/mde/tsconfig.lib.prod.json"
-}
+              "tsConfig": "projects/material-extended/mde/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -170,5 +169,8 @@
       }
     }
   },
-  "defaultProject": "mde"
+  "defaultProject": "mde",
+  "cli": {
+    "analytics": false
+  }
 }
