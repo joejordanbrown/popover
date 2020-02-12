@@ -209,7 +209,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   /** Event emitted when the popover is closed. */
   @Output() close = new EventEmitter<void>();
 
-  @ViewChild(TemplateRef, { static: false }) templateRef: TemplateRef<any>;
+  @ViewChild(TemplateRef) templateRef: TemplateRef<any>;
 
   constructor(private _elementRef: ElementRef, public zone: NgZone) {
     this.setPositionClasses();
