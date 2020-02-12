@@ -15,8 +15,8 @@ import {
 
 import { AnimationEvent } from '@angular/animations';
 
-import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { ESCAPE } from '@angular/cdk/keycodes';
+import { coerceBooleanProperty } from '@angular/cdk/coercion/boolean-property';
+import { ESCAPE } from '@angular/cdk/keycodes/keycodes';
 
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
 import { throwMdePopoverInvalidPositionX, throwMdePopoverInvalidPositionY } from './popover-errors';
