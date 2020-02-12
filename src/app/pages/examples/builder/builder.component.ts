@@ -40,4 +40,8 @@ export class PageExamplesBuilderComponent {
   }
   private _tickInterval = 1;
 
+  resetForm() {
+    // to do.. template variable #popoverTrigger, popoverTrigger.reset()
+  }
+
 }

@@ -6,7 +6,7 @@
   
       <mat-form-field class="full-width">
         <mat-label>@Input('mdePopoverTriggerOn') triggerEvent</mat-label>
-        <mat-select [(ngModel)]="event" (selectionChange)="popoverTrigger.reset()">
+        <mat-select [(ngModel)]="event" (selectionChange)="resetForm()">
           <mat-option value="click">Click</mat-option>
           <mat-option value="hover">Hover</mat-option>
         </mat-select>
@@ -18,7 +18,7 @@
   
       <mat-form-field class="full-width">
         <mat-label>@Input('mdePopoverPositionX') positionX</mat-label>
-        <mat-select [(ngModel)]="popoverPositionX" (selectionChange)="popoverTrigger.reset()">
+        <mat-select [(ngModel)]="popoverPositionX" (selectionChange)="resetForm()">
           <mat-option value="before">before</mat-option>
           <mat-option value="after">after</mat-option>
         </mat-select>
@@ -30,7 +30,7 @@
 
       <mat-form-field  class="full-width">
         <mat-label>@Input('mdePopoverPositionY') positionY</mat-label>
-        <mat-select [(ngModel)]="popoverPositionY" (selectionChange)="popoverTrigger.reset()">
+        <mat-select [(ngModel)]="popoverPositionY" (selectionChange)="resetForm()">
           <mat-option value="above">above</mat-option>
           <mat-option value="below">below</mat-option>
         </mat-select>
@@ -85,7 +85,7 @@
         <mat-button-toggle value="align-center">Center</mat-button-toggle>
         <mat-button-toggle value="align-right">Right</mat-button-toggle>
       </mat-button-toggle-group>
-      <button (click)="popoverTrigger.reset()">RESET</button>
+      <button (click)="resetForm()">RESET</button>
     </mat-card-title>
 
     <div class="">
