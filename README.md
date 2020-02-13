@@ -1,4 +1,4 @@
-# Material Extended for Angular - Popover
+# Angular Popover
 
 [![npm version](https://badge.fury.io/js/%40material-extended%2Fmde.svg)](https://www.npmjs.com/package/%40material-extended%2Fmde)
 [![Build Status](https://travis-ci.org/material-extended/popover.svg?branch=master)](https://travis-ci.org/material-extended/popover)
@@ -6,12 +6,12 @@
 [![Join the chat at https://gitter.im/material-extended/mde](https://badges.gitter.im/material-extended/mde.svg)](https://gitter.im/material-extended/mde?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 #### Links
-[Material Popover Demo](https://uixd.co.uk/open-source-software/material-extended/demo) | [StackBlitz Template](https://stackblitz.com/edit/mde-popover)
+[Popover Demo](https://uixd.co.uk/open-source-software/material-extended/demo) | [StackBlitz Template](https://stackblitz.com/edit/mde-popover)
 
 
 
 ### Project status
-Angular Material Extended is production ready.
+Angular Popover is production ready.
 
 This was originally created as an example for a `@angular/material` issue feature request.
 Issue can be found at [angular/material2#2691](https://github.com/angular/material2/issues/2691)
