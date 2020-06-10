@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/material-extended/mde/compare/v3.0.0...v3.0.1) (2020-06-10)
+
+
+
 ## [3.0.0](https://github.com/material-extended/mde/compare/v2.3.1...v3.0.0) (2020-02-12)
 
 
