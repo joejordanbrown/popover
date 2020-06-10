@@ -1,7 +1,12 @@
 {
-  "packageFiles": [
+  "bumpFiles": [
     {
-      "filename": "projects/material-extended/mde/package.json"
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "projects/material-extended/mde/package.json",
+      "type": "json"
     }
   ]
 }
