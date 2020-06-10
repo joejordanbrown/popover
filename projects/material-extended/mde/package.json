@@ -1,6 +1,6 @@
 {
   "name": "@material-extended/mde",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "peerDependencies": {
     "@angular/animations": "^8.0.0 || ^9.0.0-0",
     "@angular/cdk": "^8.0.0 || ^9.0.0-0",
