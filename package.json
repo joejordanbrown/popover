@@ -1,7 +1,7 @@
 {
   "name": "@material-extended/mde",
   "description": "Angular Material Extended",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "author": {
     "name": "Joe Jordan Brown",
     "email": "joe.jordan.brown@gmail.com"
@@ -34,6 +34,7 @@
     "serve": "ng serve --aot",
     "build": "ng build",
     "build:library": "ng build @material-extended/mde",
+    "build:library:prod": "ng build @material-extended/mde --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
