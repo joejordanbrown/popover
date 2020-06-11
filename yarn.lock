@@ -216,10 +216,10 @@
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-9.1.10.tgz#a885b7903c1dcce36c327e9ca9b5f6e7ec1aa716"
   integrity sha512-z8urbP03LYxiCci076SYXz+9elCukePP0ykq5RVJYe5300V6JhamGftTQgsaKszas0KlGYUz/jTULhWQ+OEv/A==
 
-"@angular/platform-browser@^9.1.10":
-  version "9.1.10"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.1.10.tgz#d014e59a2ec4722d0bb428910116c41176868d77"
-  integrity sha512-u8PHq92+OV0vrRKwc5bqS0SCR/VkzhuaUUXKYbjYeLsmXG+HUtg/pUCDo95ze4zPO1WFSeUvwsnRb2x1hurYAw==
+"@angular/platform-browser@^9.1.11":
+  version "9.1.11"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.1.11.tgz#4da8e2a4231d5162304746a39f54cb2d3f241b7c"
+  integrity sha512-KDxoiFhW4UD+EqchcKpQVSLwg9Rd3JbWytZLchFV6nH8BFnshfJtw2tyPT8bMhFVG9n9zSR4QSGaozWgoDs9mw==
 
 "@angular/router@^9.1.10":
   version "9.1.10"
