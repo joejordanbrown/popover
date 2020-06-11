@@ -221,10 +221,10 @@
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.1.10.tgz#d014e59a2ec4722d0bb428910116c41176868d77"
   integrity sha512-u8PHq92+OV0vrRKwc5bqS0SCR/VkzhuaUUXKYbjYeLsmXG+HUtg/pUCDo95ze4zPO1WFSeUvwsnRb2x1hurYAw==
 
-"@angular/router@^9.1.10":
-  version "9.1.10"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-9.1.10.tgz#e0e9c5b1c35c9ab9b843c478c3cec038a0d15e19"
-  integrity sha512-nvMSzgmsjyj+vzw0meHpN1lea7kf106ml+g97RgxiOgHAtBUnuuedXpBKrajK2kA2m9QbwQvIaKrxkdBzyLuSw==
+"@angular/router@^9.1.11":
+  version "9.1.11"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-9.1.11.tgz#b6d28af55fe5631bbc46f306a0e7866253d4f3b1"
+  integrity sha512-D6CCDeSK/F6dWSB/a1g/zB072xG5LadLSV8afQ57oX1KHePx21LcoRG4tUtFMMHh/jZXRc9pMQIR1/9FrrXF3Q==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
