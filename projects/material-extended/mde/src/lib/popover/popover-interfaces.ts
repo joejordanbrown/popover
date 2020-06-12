@@ -1,5 +1,5 @@
 import { ElementRef, EventEmitter, NgZone, TemplateRef } from '@angular/core';
-import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
+import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent, MdePopoverScrollStrategy } from './popover-types';
 
 export interface MdePopoverPanel {
     positionX: MdePopoverPositionX;
@@ -7,6 +7,7 @@ export interface MdePopoverPanel {
     containerPositioning: boolean;
     overlapTrigger: boolean;
     triggerEvent: MdePopoverTriggerEvent;
+    scrollStrategy: MdePopoverScrollStrategy;
     enterDelay: number;
     leaveDelay: number;
     targetOffsetX: number;

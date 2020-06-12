@@ -21,14 +21,15 @@ import {
   OverlayConfig,
   HorizontalConnectionPos,
   VerticalConnectionPos,
-  FlexibleConnectedPositionStrategy
+  FlexibleConnectedPositionStrategy,
+  ScrollStrategy
 } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 
 import { Subscription } from 'rxjs';
 
 import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
-import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
+import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent, MdePopoverScrollStrategy } from './popover-types';
 import { throwMdePopoverMissingError } from './popover-errors';
 
 
@@ -360,8 +361,25 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         }
 
         overlayState.direction = this.dir;
-        overlayState.scrollStrategy = this._overlay.scrollStrategies.reposition();
+        overlayState.scrollStrategy = this._getOverlayScrollStrategy(this.popover.scrollStrategy);
         return overlayState;
+    }
+
+    /**
+     * This method returns the scroll strategy used by the cdk/overlay.
+     */
+    private _getOverlayScrollStrategy(strategy: MdePopoverScrollStrategy): ScrollStrategy {
+      switch(strategy) {
+        case 'noop':
+          return this._overlay.scrollStrategies.noop();
+        case 'close':
+          return this._overlay.scrollStrategies.close();
+        case 'block':
+          return this._overlay.scrollStrategies.block();
+        case 'reposition':
+        default:
+          return this._overlay.scrollStrategies.reposition();
+      }
     }
 
     /**

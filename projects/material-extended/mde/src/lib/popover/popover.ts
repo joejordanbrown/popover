@@ -18,7 +18,7 @@ import { AnimationEvent } from '@angular/animations';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { ESCAPE } from '@angular/cdk/keycodes';
 
-import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent } from './popover-types';
+import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent, MdePopoverScrollStrategy } from './popover-types';
 import { throwMdePopoverInvalidPositionX, throwMdePopoverInvalidPositionY } from './popover-errors';
 import { MdePopoverPanel } from './popover-interfaces';
 import { transformPopover } from './popover-animations';
@@ -42,6 +42,7 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   private _positionX: MdePopoverPositionX = 'after';
   private _positionY: MdePopoverPositionY = 'below';
   private _triggerEvent: MdePopoverTriggerEvent = 'hover';
+  private _scrollStrategy: MdePopoverScrollStrategy = 'reposition';
   private _enterDelay = 200;
   private _leaveDelay = 200;
   private _overlapTrigger = true;
@@ -104,6 +105,11 @@ export class MdePopover implements MdePopoverPanel, OnDestroy { // tslint:disabl
   @Input('mdePopoverTriggerOn')
   get triggerEvent(): MdePopoverTriggerEvent { return this._triggerEvent; }
   set triggerEvent(value: MdePopoverTriggerEvent) { this._triggerEvent = value; }
+
+  /** Popover scroll strategy */
+  @Input('mdePopoverScrollStrategy')
+  get scrollStrategy(): MdePopoverScrollStrategy { return this._scrollStrategy; }
+  set scrollStrategy(value: MdePopoverScrollStrategy) { this._scrollStrategy = value; }
 
   /** Popover enter delay */
   @Input('mdePopoverEnterDelay')
