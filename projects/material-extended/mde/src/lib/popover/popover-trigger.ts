@@ -263,8 +263,8 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         if (this._overlayRef) {
           this._overlayRef.dispose();
           this._overlayRef = null;
-          this._cleanUpSubscriptions();
         }
+        this._cleanUpSubscriptions();
     }
 
     /** Focuses the popover trigger. */
