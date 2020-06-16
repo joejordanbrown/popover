@@ -125,10 +125,10 @@
     ora "4.0.3"
     rxjs "6.5.4"
 
-"@angular/animations@^9.1.10":
-  version "9.1.10"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-9.1.10.tgz#c0f0b7e30dbe95ef8edd62e5d6c2ea3224d76966"
-  integrity sha512-xuiL2iE8vka3IZpvwnOYDhfKKn9xKB+qyn7mcWzr6xnFP3UPfxN/1HuDJYgtwd+KXtTZmzlsm8orh+DZ3MGxbA==
+"@angular/animations@^9.1.11":
+  version "9.1.11"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-9.1.11.tgz#2c7b6e584df0ba0884d05f01fa7ab86c1fdd1c5e"
+  integrity sha512-VKAExUnEJfo1PDQKagpx2pn+QMZCsPLRiADzTdl4U0VPylK3ALbn4ZNY9UbdwyE2plitz++LkH7sEGGfh+PNrQ==
 
 "@angular/cdk@^9.2.4":
   version "9.2.4"
