@@ -196,10 +196,12 @@
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.1.10.tgz#cb9c99cd99a61cc55337220cafac005332ff9fdf"
   integrity sha512-pp8g0razdSi3HzSBHRzBdn5WmnVJZ5IF+sWuApvplnl4edBO0CFdZAKALmRgjctRD9y9aVPXhkEi17Spiip9aA==
 
-"@angular/forms@^9.1.10":
-  version "9.1.10"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-9.1.10.tgz#74da1653581bb5021015cf76fa04316a627376e6"
-  integrity sha512-Qp/tO3bayvP3lkpuMe2oWGBhATd39Vd9z9z/LIWtM+PkEZCZ0xCh0d6AiKrO9sc1vDATCi4SKxEnNCkmPBWOuQ==
+"@angular/forms@^10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-10.0.1.tgz#b6fc657e00331d898540951b94b5704c3939bd69"
+  integrity sha512-FyHSYCtMWgudJds7r8gJxMgfgUB66+YeX4dTT2bhjQFqbeBiKfAiF25mA1s5n4SITVDjD+yTOKRckXCIshQAHA==
+  dependencies:
+    tslib "^2.0.0"
 
 "@angular/language-service@^9.1.10":
   version "9.1.10"
@@ -9748,15 +9750,15 @@ ts-node@~8.3.0:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
-tslib@1.11.1:
+tslib@1.11.1, tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
-tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
-  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+tslib@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
+  integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
 
 tslint@~6.1.2:
   version "6.1.2"
