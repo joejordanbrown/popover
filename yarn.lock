@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@angular-devkit/architect@0.1000.1":
+  version "0.1000.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1000.1.tgz#6ca8529d888b3f5fc1f28863bb744855b67b811e"
+  integrity sha512-GpoJ+p38feerxwfpJgrjwv/2c47qIX+TMdfKVqbswxLnzK21hXjd0zn6UfovAFwLeL1hRu2O00NDsmQn01gdoA==
+  dependencies:
+    "@angular-devkit/core" "10.0.1"
+    rxjs "6.5.5"
+
 "@angular-devkit/architect@0.901.7":
   version "0.901.7"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.901.7.tgz#6a09cb076ca92b3202053fca757a456d1f8e4395"
@@ -77,13 +85,13 @@
     webpack-subresource-integrity "1.4.0"
     worker-plugin "4.0.3"
 
-"@angular-devkit/build-ng-packagr@~0.901.7":
-  version "0.901.7"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-ng-packagr/-/build-ng-packagr-0.901.7.tgz#d8bce9c67cba4299f6c4a5bdd13840bc39ed0f58"
-  integrity sha512-HJ6nzXIUyI8yUuXGtdk26qDgLzlmfSwsSuc8JWdeqieP82fz/qokf78vVAqyHyJ9gi90IZiPO2+oh6Ot6UMo+g==
+"@angular-devkit/build-ng-packagr@~0.1000.1":
+  version "0.1000.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-ng-packagr/-/build-ng-packagr-0.1000.1.tgz#60e1143866ca000d3e7a9e46d3bcd3f918160276"
+  integrity sha512-y8w1DPtBp/mW12JJnKYx/56cMG8m4g7XHllsDvYuxHZ0XW3iqA967DKsE0xcyYBMn84yKybgqyibZVKZiXNTIA==
   dependencies:
-    "@angular-devkit/architect" "0.901.7"
-    rxjs "6.5.4"
+    "@angular-devkit/architect" "0.1000.1"
+    rxjs "6.5.5"
 
 "@angular-devkit/build-optimizer@0.901.7":
   version "0.901.7"
@@ -104,6 +112,17 @@
     "@angular-devkit/architect" "0.901.7"
     "@angular-devkit/core" "9.1.7"
     rxjs "6.5.4"
+
+"@angular-devkit/core@10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-10.0.1.tgz#acc1c6a088507e7340964c8cbf85e91781e86686"
+  integrity sha512-AXsxN00zbixi/9HyzzsDGm6rtMferxKfhG8WPJfp/0TLeJrmiLs5wdNjk8LhfTZABSTYx/QxRgOI6OnBoXePgg==
+  dependencies:
+    ajv "6.12.2"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.5.5"
+    source-map "0.7.3"
 
 "@angular-devkit/core@9.1.7":
   version "9.1.7"
@@ -1590,20 +1609,20 @@ ajv@6.12.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^6.1.0, ajv@^6.10.2, ajv@^6.5.5:
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.11.0.tgz#c3607cbc8ae392d8a5a536f25b21f8e5f3f87fe9"
-  integrity sha512-nCprB/0syFYy9fVYU1ox1l2KN8S9I+tziH8D4zdZuLT3N6RMlGSGt5FSTpAiHB/Whv8Qs1cWHma1aMKZyaHRKA==
+ajv@6.12.2, ajv@^6.12.2:
+  version "6.12.2"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz#c629c5eced17baf314437918d2da88c99d5958cd"
+  integrity sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
   dependencies:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^6.12.2:
-  version "6.12.2"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz#c629c5eced17baf314437918d2da88c99d5958cd"
-  integrity sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
+ajv@^6.1.0, ajv@^6.10.2, ajv@^6.5.5:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.11.0.tgz#c3607cbc8ae392d8a5a536f25b21f8e5f3f87fe9"
+  integrity sha512-nCprB/0syFYy9fVYU1ox1l2KN8S9I+tziH8D4zdZuLT3N6RMlGSGt5FSTpAiHB/Whv8Qs1cWHma1aMKZyaHRKA==
   dependencies:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
@@ -8575,14 +8594,14 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@6.5.4, rxjs@^6.5.0:
+rxjs@6.5.4:
   version "6.5.4"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
   integrity sha512-naMQXcgEo3csAEGvw/NydRA0fuS2nDZJiw1YUWFKU7aPPAPGZEsD4Iimit96qwCieH6y614MCLYwdkrWx7z/7Q==
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.5.3, rxjs@~6.5.5:
+rxjs@6.5.5, rxjs@^6.5.0, rxjs@^6.5.3, rxjs@~6.5.5:
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
   integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
