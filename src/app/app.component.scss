@@ -1,19 +1,18 @@
 .fill {
-    flex: 1 1 auto;
-  }
-  
-  .example-card {
-    max-width: 300px;
-  }
-  
-  .support-button {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-  }
-  
-  
-  .container {
-    padding: 40px;
-  }
-  
+  flex: 1 1 auto;
+}
+
+.example-card {
+  max-width: 300px;
+}
+
+.support-button {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+}
+
+
+.container {
+  padding: 40px;
+}
