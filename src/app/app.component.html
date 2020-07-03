@@ -19,15 +19,35 @@
 </mat-toolbar>
 
 
-<mde-popover #themePopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverCloseOnClick]="false" [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10" [mdePopoverArrowOffsetX]="58" mdePopoverArrowColor="#FFFFFF">
+<mde-popover #themePopover="mdePopover"
+             [mdePopoverOverlapTrigger]="false"
+             [mdePopoverCloseOnClick]="false"
+             [mdePopoverOffsetX]="-16"
+             [mdePopoverOffsetY]="-10"
+             [mdePopoverArrowOffsetX]="58"
+             mdePopoverArrowColor="#FFFFFF"
+             mdePopoverScrollStrategy="close">
   <theme-picker [(theme)]="themeClass"></theme-picker>
 </mde-popover>
 
-<mde-popover #notificationsPopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10" [mdePopoverArrowOffsetX]="58" mdePopoverArrowColor="#1b1c1b" [mdePopoverCloseOnClick]="false">
+<mde-popover #notificationsPopover="mdePopover"
+             [mdePopoverOverlapTrigger]="false"
+             [mdePopoverOffsetX]="-16"
+             [mdePopoverOffsetY]="-10"
+             [mdePopoverArrowOffsetX]="58"
+             mdePopoverArrowColor="#1b1c1b"
+             [mdePopoverCloseOnClick]="false">
   <app-notifications></app-notifications>
 </mde-popover>
 
-<mde-popover #githubPopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverOffsetX]="-16" [mdePopoverOffsetY]="-10" [mdePopoverArrowOffsetX]="18" mdePopoverArrowColor="#FFFFFF" [mdePopoverCloseOnClick]="false">
+<mde-popover #githubPopover="mdePopover"
+             [mdePopoverOverlapTrigger]="false"
+             [mdePopoverOffsetX]="-16"
+             [mdePopoverOffsetY]="-10"
+             [mdePopoverArrowOffsetX]="18"
+             mdePopoverArrowColor="#FFFFFF"
+             [mdePopoverCloseOnClick]="false"
+             mdePopoverScrollStrategy="close">
   <app-github></app-github>
 </mde-popover>
 
@@ -61,7 +81,7 @@
 <mde-popover #supportPopover="mdePopover" mdePopoverPositionX="before" mdePopoverPositionY="above"
              [mdePopoverArrowOffsetX]="28" [mdePopoverArrowWidth]="16"
              [mdePopoverOverlapTrigger]="false" [mdeFocusTrapEnabled]="true" mdePopoverTriggerOn="click"
-             mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100">
+             mdePopoverPlacement="bottom" [mdePopoverEnterDelay]="100" mdePopoverScrollStrategy="block">
   <app-support></app-support>
 </mde-popover>
 
