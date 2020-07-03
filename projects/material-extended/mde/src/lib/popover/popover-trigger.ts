@@ -26,11 +26,12 @@ import {
 } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 
-import { Subscription } from 'rxjs';
+import { Subscription, Subject } from 'rxjs';
 
 import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
 import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent, MdePopoverScrollStrategy } from './popover-types';
 import { throwMdePopoverMissingError } from './popover-errors';
+import { takeUntil } from 'rxjs/operators';
 
 
 
@@ -47,18 +48,24 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
     @HostBinding('attr.aria-haspopup') ariaHaspopup = true;
 
+    popoverOpened = new Subject<void>();
+    popoverClosed = new Subject<void>();
+
     private _portal: TemplatePortal<any>;
     private _overlayRef: OverlayRef | null = null;
     private _popoverOpen = false;
     private _halt = false;
     private _backdropSubscription: Subscription;
     private _positionSubscription: Subscription;
+    private _detachmentsSubscription: Subscription;
 
     private _mouseoverTimer: any;
 
     // tracking input type is necessary so it's possible to only auto-focus
     // the first item of the list when the popover is opened via the keyboard
     private _openedByMouse = false;
+
+    private _onDestroy = new Subject<void>();
 
     /** References the popover instance that the trigger is associated with. */
     @Input('mdePopoverTriggerFor') popover: MdePopoverPanel;
@@ -127,8 +134,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         this.popover.close.subscribe(() => this.closePopover());
     }
 
-    ngOnDestroy() { this.destroyPopover(); }
-
+    ngOnDestroy() {
+      this.destroyPopover();
+    }
 
     private _setCurrentConfig() {
 
@@ -187,35 +195,36 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     /** Whether the popover is open. */
     get popoverOpen(): boolean { return this._popoverOpen; }
 
-    @HostListener('click', ['$event']) onClick(event: MouseEvent): void {
+    @HostListener('click', ['$event'])
+    onClick(event: MouseEvent): void {
       if (this.popover.triggerEvent === 'click') {
-          // this.popover.setCurrentStyles();
-          // this._setCurrentConfig();
-          this.togglePopover();
+        this.togglePopover();
       }
     }
 
-    @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent): void {
+    @HostListener('mouseenter', ['$event'])
+    onMouseEnter(event: MouseEvent): void {
       this._halt = false;
       if (this.popover.triggerEvent === 'hover') {
-          this._mouseoverTimer = setTimeout(() => {
-              this.openPopover();
-          }, this.popover.enterDelay);
+        this._mouseoverTimer = setTimeout(() => {
+          this.openPopover();
+        }, this.popover.enterDelay);
       }
     }
 
-    @HostListener('mouseleave', ['$event']) onMouseLeave(event: MouseEvent): void {
+    @HostListener('mouseleave', ['$event'])
+    onMouseLeave(event: MouseEvent): void {
       if (this.popover.triggerEvent === 'hover') {
         if (this._mouseoverTimer) {
-            clearTimeout(this._mouseoverTimer);
-            this._mouseoverTimer = null;
+          clearTimeout(this._mouseoverTimer);
+          this._mouseoverTimer = null;
         }
         if (this._popoverOpen) {
-            setTimeout(() => {
-                if (!this.popover.closeDisabled) {
-                    this.closePopover();
-                }
-            }, this.popover.leaveDelay);
+          setTimeout(() => {
+            if (!this.popover.closeDisabled) {
+                this.closePopover();
+            }
+          }, this.popover.leaveDelay);
         } else {
           this._halt = true;
         }
@@ -231,11 +240,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     openPopover(): void {
         if (!this._popoverOpen && !this._halt) {
             this._createOverlay().attach(this._portal);
-
-            /** Only subscribe to backdrop if trigger event is click */
-            if (this.triggerEvent === 'click' && this.backdropCloseOnClick === true) {
-              this._subscribeToBackdrop();
-            }
+    
+            this._subscribeToBackdrop();
+            this._subscribeToDetachments();
 
             this._initPopover();
         }
@@ -243,14 +250,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
     /** Closes the popover. */
     closePopover(): void {
+      console.log('close');
         if (this._overlayRef) {
           this._overlayRef.detach();
-
-          /** Only unsubscribe to backdrop if trigger event is click */
-          if (this.triggerEvent === 'click' && this.backdropCloseOnClick === true) {
-            this._backdropSubscription.unsubscribe();
-          }
-
           this._resetPopover();
         }
     }
@@ -266,6 +268,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
           this._overlayRef = null;
           this._cleanUpSubscriptions();
         }
+
+        this._onDestroy.next();
+        this._onDestroy.complete();
     }
 
     /** Focuses the popover trigger. */
@@ -285,11 +290,32 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     * explicitly when the popover is closed or destroyed.
     */
     private _subscribeToBackdrop(): void {
-        if (this._overlayRef) {
-          this._backdropSubscription = this._overlayRef.backdropClick().subscribe(() => {
+      if (this._overlayRef) {
+        /** Only subscribe to backdrop if trigger event is click */
+        if (this.triggerEvent === 'click' && this.backdropCloseOnClick === true) {
+          this._overlayRef.backdropClick()
+          .pipe(
+            takeUntil(this.popoverClosed),
+            takeUntil(this._onDestroy),
+          )
+          .subscribe(() => {
             this.popover._emitCloseEvent();
           });
         }
+      }
+    }
+
+    private _subscribeToDetachments(): void {
+      if (this._overlayRef) {
+        this._overlayRef.detachments()
+          .pipe(
+            takeUntil(this.popoverClosed),
+            takeUntil(this._onDestroy),
+          )
+          .subscribe(() => {
+            this._setPopoverClosed();
+          });
+      }
     }
 
     /**
@@ -297,7 +323,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     * the popover was opened via the keyboard.
     */
     private _initPopover(): void {
-        this._setIsPopoverOpen(true);
+        this._setPopoverOpened();
     }
 
     /**
@@ -305,7 +331,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     * focus to the popover trigger if the popover was opened via the keyboard.
     */
     private _resetPopover(): void {
-        this._setIsPopoverOpen(false);
+        this._setPopoverClosed();
 
         // Focus only needs to be reset to the host element if the popover was opened
         // by the keyboard and manually shifted to the first popover item.
@@ -316,9 +342,23 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     }
 
     /** set state rather than toggle to support triggers sharing a popover */
-    private _setIsPopoverOpen(isOpen: boolean): void {
-        this._popoverOpen = isOpen;
-        this._popoverOpen ? this.opened.emit() : this.closed.emit();
+    private _setPopoverOpened(): void {
+      if (!this._popoverOpen) {
+        this._popoverOpen = true;
+        
+        this.popoverOpened.next();
+        this.opened.emit()
+      }
+    }
+
+    /** set state rather than toggle to support triggers sharing a popover */
+    private _setPopoverClosed(): void {
+      if (this._popoverOpen) {
+        this._popoverOpen = false;
+        
+        this.popoverClosed.next();
+        this.closed.emit();
+      }
     }
 
     /**
@@ -362,6 +402,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
         overlayState.direction = this.dir;
         overlayState.scrollStrategy = this._getOverlayScrollStrategy(this.popover.scrollStrategy);
+
         return overlayState;
     }
 
@@ -371,6 +412,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     private _getOverlayScrollStrategy(strategy: MdePopoverScrollStrategy): ScrollStrategy {
       switch(strategy) {
         case 'noop':
+          console.log('noop');
           return this._overlay.scrollStrategies.noop();
         case 'close':
           return this._overlay.scrollStrategies.close();
@@ -497,23 +539,6 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         ])
         .withDefaultOffsetX(offsetX)
         .withDefaultOffsetY(offsetY);
-        /*
-        return this._overlay.position()
-          .connectedTo(element,
-              {originX: posX, originY: originY},
-              {overlayX: posX, overlayY: overlayY})
-          .withFallbackPosition(
-              {originX: fallbackX, originY: originY},
-              {overlayX: fallbackX, overlayY: overlayY})
-          .withFallbackPosition(
-              {originX: posX, originY: fallbackOriginY},
-              {overlayX: posX, overlayY: fallbackOverlayY})
-          .withFallbackPosition(
-              {originX: fallbackX, originY: fallbackOriginY},
-              {overlayX: fallbackX, overlayY: fallbackOverlayY})
-          .withOffsetX(offsetX)
-          .withOffsetY(offsetY);
-          */
     }
 
     private _cleanUpSubscriptions(): void {
@@ -522,6 +547,9 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         }
         if (this._positionSubscription) {
             this._positionSubscription.unsubscribe();
+        }
+        if (this._detachmentsSubscription) {
+          this._detachmentsSubscription.unsubscribe();
         }
     }
 
