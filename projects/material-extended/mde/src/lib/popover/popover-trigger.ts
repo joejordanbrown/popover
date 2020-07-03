@@ -506,39 +506,40 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
         }
 
         return this._overlay.position()
-        .flexibleConnectedTo(element)
-        .withPositions([
-          {
+          .flexibleConnectedTo(element)
+          .withLockedPosition(true)
+          .withPositions([
+            {
+                originX,
+                originY,
+                overlayX,
+                overlayY,
+                offsetY
+            },
+            {
+                originX: originFallbackX,
+                originY,
+                overlayX: overlayFallbackX,
+                overlayY,
+                offsetY
+            },
+            {
               originX,
-              originY,
+              originY: originFallbackY,
               overlayX,
-              overlayY,
-              offsetY
-          },
-          {
+              overlayY: overlayFallbackY,
+              offsetY: -offsetY
+            },
+            {
               originX: originFallbackX,
-              originY,
+              originY: originFallbackY,
               overlayX: overlayFallbackX,
-              overlayY,
-              offsetY
-          },
-          {
-            originX,
-            originY: originFallbackY,
-            overlayX,
-            overlayY: overlayFallbackY,
-            offsetY: -offsetY
-          },
-          {
-            originX: originFallbackX,
-            originY: originFallbackY,
-            overlayX: overlayFallbackX,
-            overlayY: overlayFallbackY,
-            offsetY: -offsetY
-          }
-        ])
-        .withDefaultOffsetX(offsetX)
-        .withDefaultOffsetY(offsetY);
+              overlayY: overlayFallbackY,
+              offsetY: -offsetY
+            }
+          ])
+          .withDefaultOffsetX(offsetX)
+          .withDefaultOffsetY(offsetY);
     }
 
     private _cleanUpSubscriptions(): void {
