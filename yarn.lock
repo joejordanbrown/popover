@@ -125,10 +125,12 @@
     ora "4.0.3"
     rxjs "6.5.4"
 
-"@angular/animations@^9.1.10":
-  version "9.1.10"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-9.1.10.tgz#c0f0b7e30dbe95ef8edd62e5d6c2ea3224d76966"
-  integrity sha512-xuiL2iE8vka3IZpvwnOYDhfKKn9xKB+qyn7mcWzr6xnFP3UPfxN/1HuDJYgtwd+KXtTZmzlsm8orh+DZ3MGxbA==
+"@angular/animations@^10.0.8":
+  version "10.0.8"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-10.0.8.tgz#f033a7043f41075fae128ea6e91bcdaec3a4df2f"
+  integrity sha512-vxJRNz6CbguuoLxZpKbaCRcJRFg+/UeXvrUjRlUxwJpAni5hFYkWZUjjXvHDszI97q8FkDNLpGDPcggGqPfo4w==
+  dependencies:
+    tslib "^2.0.0"
 
 "@angular/cdk@^9.2.4":
   version "9.2.4"
@@ -9748,15 +9750,15 @@ ts-node@~8.3.0:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
-tslib@1.11.1:
+tslib@1.11.1, tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
-tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
-  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+tslib@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
+  integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
 
 tslint@~6.1.2:
   version "6.1.2"
