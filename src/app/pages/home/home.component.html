@@ -21,6 +21,16 @@
   </li>
 </ul>
 
+<p>
+  Reposition
+</p>
+
+<button mat-raised-button color="primary" #repositionTrigger="mdePopoverTrigger" [mdePopoverTriggerFor]="popover5" (click)="onClick()">
+  Reposition
+</button>
+<button mat-raised-button color="accent"(click)="onReset()">
+  Reset
+</button>
 
 <mde-popover #popover1="mdePopover" [mdePopoverLeaveDelay]="1000">
   <mat-card class="example-card">
@@ -79,4 +89,12 @@
   </mat-card>
 </mde-popover>
 
-
+<mde-popover #popover5="mdePopover"
+  [mdePopoverOffsetX]="offsetX"
+  mdePopoverOffsetY="40"
+  mdePopoverPositionX="after"
+  mdePopoverPositionY="below">
+	<mat-card>
+		offsetX: {{ offsetX }}px
+	</mat-card>
+</mde-popover>

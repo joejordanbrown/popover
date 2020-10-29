@@ -240,7 +240,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     openPopover(): void {
         if (!this._popoverOpen && !this._halt) {
             this._createOverlay().attach(this._portal);
-    
+
             this._subscribeToBackdrop();
             this._subscribeToDetachments();
 
@@ -255,6 +255,13 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
           this._overlayRef.detach();
           this._resetPopover();
         }
+    }
+
+    repositionPopover(): void {
+      if (this._overlayRef != null) {
+        const config = this._getOverlayConfig();
+        this._overlayRef.updatePositionStrategy(config.positionStrategy);
+      }
     }
 
     /** Removes the popover from the DOM. */
@@ -345,7 +352,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     private _setPopoverOpened(): void {
       if (!this._popoverOpen) {
         this._popoverOpen = true;
-        
+
         this.popoverOpened.next();
         this.opened.emit()
       }
@@ -355,7 +362,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     private _setPopoverClosed(): void {
       if (this._popoverOpen) {
         this._popoverOpen = false;
-        
+
         this.popoverClosed.next();
         this.closed.emit();
       }
