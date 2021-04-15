@@ -35,7 +35,7 @@ class MyComponent {
 
 By default, the popover will display below (y-axis), after (x-axis), and overlapping its trigger.  The position can be changed
 using the `mdePopoverPositionX` (`before | after`) and `mdePopoverPositionY` (`above | below`) attributes.
-The popover can be be forced to not overlap the trigger using `[mdePopoverOverlapTrigger]="false"` attribute.
+The popover can be forced to not overlap the trigger using `[mdePopoverOverlapTrigger]="false"` attribute.
 
 ```html
 <mde-popover #appPopover="mdePopover" mdePopoverPositionY="above">
@@ -159,7 +159,7 @@ You can use the `<mde-popover-target>` as the target reference.
 ### Popover FocusTrap
 
 The popover uses `cdkTrapFocus` to trap focus within the popover, by default this is enabled.
-The popover can be be forced to not focus trap using `[mdeFocusTrapEnabled]="false"` attribute.
+The popover can be forced to not focus trap using `[mdeFocusTrapEnabled]="false"` attribute.
 ```html
 <mde-popover #appPopoverAccount="mdePopover" [mdeFocusTrapEnabled]="false">
   <button md-button> Profile </button>
