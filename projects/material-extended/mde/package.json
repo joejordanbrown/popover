@@ -1,13 +1,13 @@
 {
   "name": "@material-extended/mde",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/animations": "^8.0.0 || ^9.0.0-0",
-    "@angular/cdk": "^8.0.0 || ^9.0.0-0",
-    "@angular/common": "^8.0.0 || ^9.0.0-0",
-    "@angular/core": "^8.0.0 || ^9.0.0-0"
+    "@angular/animations": "~13",
+    "@angular/cdk": "~13",
+    "@angular/common": "~13",
+    "@angular/core": "~13"
   }
 }
