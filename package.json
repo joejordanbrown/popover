@@ -31,7 +31,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run build:library && npm run serve",
-    "serve": "ng serve --aot",
+    "serve": "ng serve ",
     "build": "ng build",
     "build:library": "ng build @material-extended/mde",
     "build:library:prod": "ng build @material-extended/mde --configuration production",
