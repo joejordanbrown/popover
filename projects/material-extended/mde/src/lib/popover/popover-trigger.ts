@@ -1,37 +1,26 @@
-import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  EventEmitter,
-  Input,
-  OnDestroy,
-  Optional,
-  Output,
-  ViewContainerRef,
-  HostListener,
-  HostBinding,
-  ChangeDetectorRef,
-} from '@angular/core';
-
 import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
 import { Direction, Directionality } from '@angular/cdk/bidi';
 import {
-  Overlay,
-  OverlayRef,
-  OverlayConfig,
-  HorizontalConnectionPos,
-  VerticalConnectionPos,
-  FlexibleConnectedPositionStrategy,
-  ScrollStrategy
+  FlexibleConnectedPositionStrategy, HorizontalConnectionPos, Overlay, OverlayConfig, OverlayRef, ScrollStrategy, VerticalConnectionPos
 } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
-
-import { Subscription, Subject } from 'rxjs';
-
-import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
-import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent, MdePopoverScrollStrategy } from './popover-types';
-import { throwMdePopoverMissingError } from './popover-errors';
+import {
+  AfterViewInit, ChangeDetectorRef, Directive,
+  ElementRef,
+  EventEmitter, HostBinding, HostListener, Input,
+  OnDestroy,
+  Optional,
+  Output,
+  ViewContainerRef
+} from '@angular/core';
+import { Subject, Subscription } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { throwMdePopoverMissingError } from './popover-errors';
+import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
+import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverScrollStrategy, MdePopoverTriggerEvent } from './popover-types';
+
+
+
 
 
 
@@ -250,7 +239,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
     /** Closes the popover. */
     closePopover(): void {
-      console.log('close');
+      // console.log('close');
         if (this._overlayRef) {
           this._overlayRef.detach();
           this._resetPopover();
@@ -412,7 +401,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
     private _getOverlayScrollStrategy(strategy: MdePopoverScrollStrategy): ScrollStrategy {
       switch(strategy) {
         case 'noop':
-          console.log('noop');
+          // console.log('noop');
           return this._overlay.scrollStrategies.noop();
         case 'close':
           return this._overlay.scrollStrategies.close();
