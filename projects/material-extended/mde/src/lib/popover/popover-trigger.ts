@@ -1,26 +1,37 @@
-import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
-import { Direction, Directionality } from '@angular/cdk/bidi';
 import {
-  FlexibleConnectedPositionStrategy, HorizontalConnectionPos, Overlay, OverlayConfig, OverlayRef, ScrollStrategy, VerticalConnectionPos
-} from '@angular/cdk/overlay';
-import { TemplatePortal } from '@angular/cdk/portal';
-import {
-  AfterViewInit, ChangeDetectorRef, Directive,
+  AfterViewInit,
+  Directive,
   ElementRef,
-  EventEmitter, HostBinding, HostListener, Input,
+  EventEmitter,
+  Input,
   OnDestroy,
   Optional,
   Output,
-  ViewContainerRef
+  ViewContainerRef,
+  HostListener,
+  HostBinding,
+  ChangeDetectorRef,
 } from '@angular/core';
-import { Subject, Subscription } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
-import { throwMdePopoverMissingError } from './popover-errors';
+
+import { isFakeMousedownFromScreenReader } from '@angular/cdk/a11y';
+import { Direction, Directionality } from '@angular/cdk/bidi';
+import {
+  Overlay,
+  OverlayRef,
+  OverlayConfig,
+  HorizontalConnectionPos,
+  VerticalConnectionPos,
+  FlexibleConnectedPositionStrategy,
+  ScrollStrategy
+} from '@angular/cdk/overlay';
+import { TemplatePortal } from '@angular/cdk/portal';
+
+import { Subscription, Subject } from 'rxjs';
+
 import { MdePopoverPanel, MdeTarget } from './popover-interfaces';
-import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverScrollStrategy, MdePopoverTriggerEvent } from './popover-types';
-
-
-
+import { MdePopoverPositionX, MdePopoverPositionY, MdePopoverTriggerEvent, MdePopoverScrollStrategy } from './popover-types';
+import { throwMdePopoverMissingError } from './popover-errors';
+import { takeUntil } from 'rxjs/operators';
 
 
 
@@ -239,7 +250,7 @@ export class MdePopoverTrigger implements AfterViewInit, OnDestroy { // tslint:d
 
     /** Closes the popover. */
     closePopover(): void {
-      // console.log('close');
+      console.log('close');
         if (this._overlayRef) {
           this._overlayRef.detach();
           this._resetPopover();
