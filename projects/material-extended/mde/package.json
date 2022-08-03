@@ -1,6 +1,6 @@
 {
   "name": "@material-extended/mde",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "dependencies": {
     "tslib": "^2.0.0"
   },
