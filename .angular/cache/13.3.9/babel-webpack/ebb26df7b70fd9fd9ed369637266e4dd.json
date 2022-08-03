@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { AsyncAction } from './AsyncAction';\nimport { AsyncScheduler } from './AsyncScheduler';\nexport const async = new AsyncScheduler(AsyncAction); //# sourceMappingURL=async.js.map","map":null,"metadata":{},"sourceType":"module"}

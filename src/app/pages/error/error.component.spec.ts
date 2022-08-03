@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PageErrorComponent } from './error.component';
 
@@ -6,7 +6,7 @@ describe('PageErrorComponent', () => {
   let component: PageErrorComponent;
   let fixture: ComponentFixture<PageErrorComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PageErrorComponent ]
     })
